@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="app/css/dist/output.css" type="text/css"/>
     <title>Cine-Pedro</title>
 </head>
-<body class="container max-w-screen-2xl mx-auto">
+<body class="container max-w-screen-2xl mx-auto bg-fond_black">
     <?php include("app/views/header.php"); ?>
     <main>
-        
+       <?php include("app/controllers/controllersCentral.php");?> 
     </main>
     <?php include("app/views/footer.php");?>
 </body>
