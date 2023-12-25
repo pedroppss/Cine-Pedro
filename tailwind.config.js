@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       backgroundColor:{
         fond_black:'#020510',
-        fond_transp:'#FFFFFF33'
+        fond_transp:'#FFFFFF33',
+        fond_black_2:'#020510B2'
+        
       },
       fontFamily:{
         'poppins':['Poppins']
@@ -19,10 +21,13 @@ module.exports = {
       },
       height:{
         'personalized':'43rem',
-        '516':'516px'
+        '516':'516px',
+        '620':'620px'
+
       },
       width:{
-        '500':'500px'
+        '500':'500px',
+        '300':'300px'
       },
       margin:{
         'personalized':'33rem'

@@ -1,18 +1,16 @@
+
 <?php
-    include "app/controllers/controllersUsuario.php";
-    $accion=$_REQUEST['ctl'] ?? 'inicio';
+    //include ("app/controllers/controllersUsuario.php");
+    $accion=$_REQUEST['ctl'] ?? '';
     switch ($accion) {
-        case 'inicio':
-            # code...
-            break;
         case 'login':
             
             break;
-        case 'registro':
+        case 'register':
 
             break;
         default:
-            # code...
+            
             break;
     }
 ?>
