@@ -17,15 +17,15 @@
                     <img class="-ml-20 -mt-16"  src="../images/register/vector.png" alt="vector">
                     <form action="login_register.php?ctl=register" method="POST">
                         <h1 class="text-3xl font-normal mt-12 text-white font-poppins">Registro</h1>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="nombre" id="nombre" placeholder="Nombre" value="">  
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="nombre" id="nombre" placeholder="Nombre">  
                         <br>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" value="">
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
                         <br>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="password" name="password" id="password" placeholder="Password" value="">
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="password" name="password" id="password" placeholder="Password">
                         <br>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="password" name="passwordrepetida" id="passwordrepetida" placeholder="Repetir Password" value="">
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="nif" id="nif" placeholder="NIF">
                         <br>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="email" name="gmail" id="gmail" placeholder="Email" value="">
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="email" name="gmail" id="gmail" placeholder="Email">
                         <br>
                         <button class="w-300 h-12 mt-7 bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="registrar" value="registrar">Registrarme</button>
                     </form> 
