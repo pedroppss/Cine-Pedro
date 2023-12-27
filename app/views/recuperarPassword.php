@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
    <header class="container max-w-screen-2xl p-11">
         <img src="../images/recuperarContraseña/logo.png" style="width: 179.23px ; height: 55px;" alt="logo">
    </header> 
+-->
    <main class="bg-no-repeat bg-personalized h-personalized grid content-around justify-around" style="background-image: url(../images/recuperarContraseña/fondo-imagenes.png);">
                 <div class="p-24 w-500 h-620 rounded-2xl bg-fond_transp">
                     <form action="login_register.php?ctl=login" method="POST">
@@ -23,5 +25,7 @@
                     </form> 
                 </div>
     </main>
+<!--
 </body>
 </html>
+-->

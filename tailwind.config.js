@@ -10,8 +10,18 @@ module.exports = {
       backgroundColor:{
         fond_black:'#020510',
         fond_transp:'#FFFFFF33',
-        fond_black_2:'#020510B2'
+        fond_black_2:'#020510B2',
+        fond_inicio:'#1D1731',
+        button_gray:'#FFFFFF4D',
+        button_gray_2:'#FFFFFF1A',
+        fond_film:'#EBEBEB4D',
+        button:'#8F8F8F66',
         
+      },
+      colors:{
+        color_button:'#EEEEEE',
+        color_button_2:'#CECECE',
+        color_gray:'#9E9E9E',
       },
       fontFamily:{
         'poppins':['Poppins']
@@ -21,13 +31,27 @@ module.exports = {
       },
       height:{
         'personalized':'43rem',
+        '87':'87px',
+        '190':'190px',
+        '265':'265px',
+        '396':'396px',
+        '466':'466px',
         '516':'516px',
-        '620':'620px'
-
+        '620':'620px',
+        '647':'647px',
+        '684':'684.488px',
+        
       },
       width:{
+        '350':'350px',
+        '415':'415px',
         '500':'500px',
-        '300':'300px'
+        '590':'590px',
+        '300':'300px',
+        '653':'653px',
+        '1000':'1395.871px',
+        '1001':'1361px',
+        '1361':'1361px'
       },
       margin:{
         'personalized':'33rem'

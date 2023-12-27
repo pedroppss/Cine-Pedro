@@ -8,6 +8,9 @@
         case 'register':
             (new controllersUsuario())->registarUsuario();
             break;
+        case 'logout':
+            (new controllersUsuario())->logout();
+            break;
         case 'recuperarPassword':
             (new controllersUsuario())->recuperarPassword();
         default:

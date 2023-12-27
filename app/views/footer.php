@@ -5,7 +5,7 @@
         <img src="app/images/footers/facebook.png" style="width: 24px;height: 24px;" alt="facebook">
         <img src="app/images/footers/telegram.png" style="width: 24px;height: 24px;" alt="telegram">
     </div>
-    <div class="">
+    <div>
         <nav>
             <ul class= "flex justify-center text-white gap-12 font-normal font-poppins mt-12 text-lg">
                 <li><a href="#">Home</li>

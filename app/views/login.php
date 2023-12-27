@@ -23,7 +23,7 @@
                         <button class="w-300 h-12 mt-7 bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="Enviar" value="Enviar">Enviar</button>
                     </form>
                     <form action="login_register.php?ctl=recuperarPassword" method="POST">
-                    <button class="text-white text-base mt-5 ml-16 font-normal font-poppins"  href="#">¿Has olvidado tu contraseña?</button> 
+                        <button class="text-white text-base mt-5 ml-16 font-normal font-poppins"  type="submit" href="#">¿Has olvidado tu contraseña?</button> 
                     </form>
                 </div>
     </main>
