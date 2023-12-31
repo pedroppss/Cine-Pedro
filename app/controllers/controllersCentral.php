@@ -3,7 +3,8 @@
     $accion=$_REQUEST['ctl'] ?? 'default';
     switch ($accion) {
         case 'id':
-           (new controllersPeliculas())->mostrar();
+            include "app/views/informacionPelicula.php";
+           //(new controllersPeliculas())->mostrar();
             break;
         case 'register':
 
