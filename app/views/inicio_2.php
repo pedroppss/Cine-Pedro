@@ -208,5 +208,79 @@
                 </div>
         </div> 
     </div>
+    <div class="grid grid-cols-3 ml-16 mt-16">
+        <div class="bg-fond_film w-415 h-396 p-7 rounded-2xl">
+                <img src="app/images/carteles/guardianes_galaxia_vol_3.jpg" class="w-350 h-190 rounded-md" style="">
+                    <ul class="flex gap-9 text-color_gray font-normal text-xs font-poppins mt-4">
+                        <li>7.1</li>
+                        <li>2023</li>
+                        <li>Ciencia Ficción</li>
+                        <li>150min</li>
+                        <li>16+</li>
+                    </ul>
+                    <div class="flex gap-4 mt-7">
+                        <h1 class="text-color_gray font-normal text-xl font-poppins">Director: </h1>
+                        <p class="text-white font-normal text-xl font-poppins">James Gunn</p>
+                    </div>
+                <div class="grid grid-cols-2 justify-between mt-5">
+                    <div class="flex gap-4">
+                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                        <img class="w-8 h-8" src="app/images/inicio/gusta.png">
+                        <img class="w-8 h-8" src="app/images/inicio/marcador.png">
+                    </div>
+                </div>
+        </div>
+        <div class="bg-fond_film w-415 h-396 p-7 rounded-2xl">
+                <img src="app/images/carteles/sirena.png" class="w-350 h-190 rounded-md" style="">
+                    <ul class="flex gap-9 text-color_gray font-normal text-xs font-poppins mt-4">
+                        <li>5.4</li>
+                        <li>2023</li>
+                        <li>Fantasía</li>
+                        <li>135min</li>
+                        <li>6+</li>
+                    </ul>
+                    <div class="flex gap-4 mt-7">
+                        <h1 class="text-color_gray font-normal text-xl font-poppins">Director: </h1>
+                        <p class="text-white font-normal text-xl font-poppins">Joaquim Dos Santos</p>
+                    </div>
+                <div class="grid grid-cols-2 justify-between mt-5">
+                    <div class="flex gap-4">
+                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                        <img class="w-8 h-8" src="app/images/inicio/gusta.png">
+                        <img class="w-8 h-8" src="app/images/inicio/marcador.png">
+                    </div>
+                </div>
+        </div>
+        <div class="bg-fond_film w-415 h-396 p-7 rounded-2xl">
+                <img src="app/images/carteles/needforspeed.jpg" class="w-350 h-190 rounded-md" style="">
+                    <ul class="flex gap-9 text-color_gray font-normal text-xs font-poppins mt-4">
+                        <li>5.p</li>
+                        <li>2014</li>
+                        <li>Acción</li>
+                        <li>130min</li>
+                        <li>16+</li>
+                    </ul>
+                    <div class="flex gap-4 mt-7">
+                        <h1 class="text-color_gray font-normal text-xl font-poppins">Director: </h1>
+                        <p class="text-white font-normal text-xl font-poppins">Scott Waugh</p>
+                    </div>
+                <div class="grid grid-cols-2 justify-between mt-5">
+                    <div class="flex gap-4">
+                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                        <img class="w-8 h-8" src="app/images/inicio/gusta.png">
+                        <img class="w-8 h-8" src="app/images/inicio/marcador.png">
+                    </div>
+                </div>
+        </div> 
+    </div>
     <a href="index.php?ctl=default" class="bg-button w-1361 h-87 ml-16 mt-20 mb-16 rounded-md text-white text-3xl" type="button"><p class="text-center mt-5">Show more</p></a>
 </section>
