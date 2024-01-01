@@ -24,7 +24,7 @@
             <div class="grid grid-cols-2 justify-between mt-9">
                 <div class="flex gap-4">
                     <button class="bg-button_gray w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
-                    <a href="index.php?ctl=id" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="button"><p class="text-center mt-4">Comprar</p></a>
+                    <a href="index.php?ctl=id=2" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                 </div>
                 <div class="flex justify-end gap-4">
                     <img class="w-9 h-9" src="app/images/inicio/gusta.png">
@@ -50,7 +50,7 @@
             <div class="grid grid-cols-2 justify-between mt-9">
                 <div class="flex gap-4">
                     <button class="bg-button_gray w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
-                    <button class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                    <a href="index.php?ctl=id=3" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                 </div>
                 <div class="flex justify-end gap-4">
                     <img class="w-9 h-9" src="app/images/inicio/gusta.png">
@@ -76,7 +76,8 @@
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
                         <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
-                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                        <a href="index.php?ctl=id=5" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
+                
                     </div>
                     <div class="flex justify-end gap-4">
                         <img class="w-8 h-8" src="app/images/inicio/gusta.png">
@@ -100,7 +101,7 @@
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
                         <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
-                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                        <a href="index.php?ctl=id=7" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                     </div>
                     <div class="flex justify-end gap-4">
                         <img class="w-8 h-8" src="app/images/inicio/gusta.png">
@@ -124,7 +125,8 @@
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
                         <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
-                        <button class="bg-rose-600 w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Comprar</button>
+                        <a href="index.php?ctl=id=1" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
+                
                     </div>
                     <div class="flex justify-end gap-4">
                         <img class="w-8 h-8" src="app/images/inicio/gusta.png">
