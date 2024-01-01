@@ -56,7 +56,7 @@ module.exports = {
       },
       margin:{
         'personalized':'33rem',
-        '193':'193px',
+        '151':'151px',
       }
     },
   },
