@@ -34,7 +34,17 @@ session_start();
             </div>
         </div>
         <div>
-            <img src="app/images/carteles/<?=$_SESSION['peliculas']['imagen'][0]?>" class="w-1000 h-620 -ml-151 rounded-md" alt="">
+            <img src="app/images/carteles/<?=$_SESSION['peliculas']['imagen'][0]?>" class="w-1000 h-620 -ml-1 rounded-md" alt="">
         </div>
+    </div>
+</section>
+<section class="bg-fond_inicio rounded-2xl mt-12 mb-16 h-72">
+    <h1 class="p-8 text-color_gray_2 font-poppins font-medium text-3xl">Recomendaciones</h1>
+    <div class="flex gap-10 ml-8">
+        <a href=""><img src="app/images/informacionPeliculas/vengadores.png" class="w-64 h-36"></a>
+        <a href=""><img src="app/images/informacionPeliculas/thor.png" class="w-64 h-36"></a>
+        <a href=""><img src="app/images/informacionPeliculas/strange.png" class="w-64 h-36"></a>
+        <a href=""><img src="app/images/informacionPeliculas/wonder.png" class="w-64 h-36"></a>
+        <a href=""><img src="app/images/informacionPeliculas/darkness.png" class="w-64 h-36"></a>
     </div>
 </section>
