@@ -75,7 +75,7 @@
                     </div>
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
-                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-button_gray w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
                         <a href="index.php?ctl=id=5" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                 
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
-                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-button_gray w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
                         <a href="index.php?ctl=id=7" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                     </div>
                     <div class="flex justify-end gap-4">
@@ -124,7 +124,7 @@
                     </div>
                 <div class="grid grid-cols-2 justify-between mt-5">
                     <div class="flex gap-4">
-                        <button class="bg-button_gray w-28 h-11 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
+                        <button class="bg-button_gray w-36 h-14 rounded-md text-white font-medium font-poppins text-base">Trailer</button>
                         <a href="index.php?ctl=id=1" class="bg-rose-600 w-36 h-14 rounded-md text-white font-medium font-poppins text-base" type="submit"><p class="text-center mt-4">Comprar</p></a>
                 
                     </div>
