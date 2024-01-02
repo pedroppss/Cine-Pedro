@@ -3,7 +3,7 @@
         <img src="app/images/headers/logo.png" class="" style="width: 179.23px ; height: 55px;" alt="logo">
         <nav class="-ml-16">
             <ul class="flex justify-start gap-12 text-white font-normal font-poppins">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php?ctl=default">Home</a></li>
                 <li><a href="#">Movies</a></li>
                 <li><a href="#">Series</a></li> 
                 <li><a href="#">Top</a></li>
