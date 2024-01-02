@@ -22,6 +22,7 @@ module.exports = {
         color_button:'#EEEEEE',
         color_button_2:'#CECECE',
         color_gray:'#9E9E9E',
+        color_gray_2:'#D8D8D8'
       },
       fontFamily:{
         'poppins':['Poppins']
