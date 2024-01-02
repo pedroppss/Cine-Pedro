@@ -20,5 +20,53 @@ class controllersPeliculas{
             $_SESSION['peliculas']=$peli->mostrarImagenes(3);
        
     }
+    public function mostrar_transformers()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(5);
+       
+    }
+    public function mostrar_sawx()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(7);
+       
+    }
+    public function mostrar_65()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(1);
+       
+    }
+    public function mostrar_godzilla_kong()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(6);
+       
+    }
+    public function mostrar_spiderman()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(8);
+       
+    }
+    public function mostrar_aquaman()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(9);
+       
+    }
+    public function mostrar_guardianes_galaxia()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(4);
+       
+    }
+    public function mostrar_sirena()
+    {
+            $peli=new peliculas();
+            $_SESSION['peliculas']=$peli->mostrarImagenes(10);
+       
+    }
     
 }
