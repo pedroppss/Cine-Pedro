@@ -46,5 +46,30 @@ class peliculas extends conexion_2{
             echo "Error:" .$e->getMessage();
         }
     }
+    public function mostrarDirector($id){
+        try
+        {
+            $tipo="Director";
+            $instancia=new conexion_2();
+            $conexion=$instancia->conexion;
+            $consultasql="select personalc.nombre as nombre, personalc.imagen as imagen from peliculasc INNER JOIN peliculas_personalc on peliculasc.id=peliculas_personalc.pelicula_id INNER JOIN personalc on personalc.id=peliculas_personalc.personal_id where personalc.tipo=:tipo and peliculasc.id=:id";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":id",$id,PDO::PARAM_INT);
+            $enlaceDatos->bindParam(":tipo",$tipo,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            unset($_SESSION['directores']);
+            while($row = $enlaceDatos->fetch(PDO::FETCH_ASSOC)){
+                $nombre=$row["nombre"];
+                $imagen=$row["imagen"];
+                //Agregar informacion a las variables de sesión.
+                $_SESSION['directores']['imagen'][1]=$imagen;
+                $_SESSION['directores']['nombre'][1]=$nombre;
+            }
+            $conexion=null;
+            return $_SESSION['directores'];
+        }catch(PDOException $e){
+            echo "Error:" .$e->getMessage();
+        }
+    }
 }
 ?>

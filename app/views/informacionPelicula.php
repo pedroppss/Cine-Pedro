@@ -16,7 +16,8 @@ session_start();
             <p class="text-white font-normal font-poppins text-sm ml-8 mt-7"><?=$_SESSION['peliculas']['argumento'][0]?></p> <!--Argumento-->
             <div class="flex  gap-2 ml-8 mt-4">
                 <p class="text-color_gray font-normal font-poppins text-sm">Director:</p>
-                <p class="text-white font-normal font-poppins text-sm">James Gunn</p> <!--Nombre_de_Director-->
+                <p class="text-white font-normal font-poppins text-sm"><?=$_SESSION['directores']['nombre'][1]?></p> <!--Nombre_de_Director-->
+                <img src="app/images/directores/<?=$_SESSION['directores']['imagen'][1]?>" class="w-20 h-20 rounded-2xl ml-8">
             </div>
             <div class="flex gap-2 ml-8 mt-4">
                 <p class="text-color_gray font-normal font-poppins text-sm">Actors:</p>
