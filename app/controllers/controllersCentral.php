@@ -9,6 +9,7 @@
         case 'id=2':
             include "app/views/informacionPelicula.php";
            (new controllersPeliculas())->mostrar_fast_furious();
+           
             break;
         case 'id=3':
             include "app/views/informacionPelicula.php";
