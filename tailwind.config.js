@@ -14,6 +14,7 @@ module.exports = {
         fond_inicio:'#1D1731',
         button_gray:'#FFFFFF4D',
         button_gray_2:'#FFFFFF1A',
+        button_gray_3:'#FFFFFF66',
         fond_film:'#EBEBEB4D',
         button:'#8F8F8F66',
         
