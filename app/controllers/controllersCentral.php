@@ -43,8 +43,10 @@
             include "app/views/informacionPelicula.php";
             (new controllersPeliculas())->mostrar_sirena();
             break;
+        case 'butacas':
+            include "app/views/salaButacas.php";
+            break;
         case 'register':
-
             break;
         case 'inicio_2':
             include "app/views/inicio_2.php";
