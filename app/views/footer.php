@@ -8,7 +8,7 @@
     <div>
         <nav>
             <ul class= "flex justify-center text-white gap-12 font-normal font-poppins mt-12 text-lg">
-                <li><a href="#">Home</li>
+                <li><a href="index.php?ctl=default">Home</li>
                 <li><a href="#">Jobs</li>
                 <li><a href="#">Info</li>
                 <li><a href="#">Support</li>
