@@ -13,9 +13,16 @@ class controllersUsuario{
             include "../views/login.php";
         }else
         {
-            //var_dump("conectado");
-            include "../views/login_register2.php";
+            if($_SESSION["usuarios"]["rol"]=="cliente"){
+
+                include "../views/pagcliente.php";
+            }else{
+                include "../views/pagadmin.php";
+            }
+            
+            //var_dump($_SESSION["usuarios"]['rol']);
         }
+        
     }
     public function registarUsuario()
     {
