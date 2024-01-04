@@ -10,7 +10,7 @@ class Usuario extends conexion{
     try{
         $instancia=new Usuario();
         $conexion=$instancia->conexion;
-        $consultasql="select correo,nombre,hash_pass,avatar from usuariosc where correo=:correo";
+        $consultasql="select correo,nombre,hash_pass,avatar,rol from usuariosc where correo=:correo";
         $enlaceDatos=$conexion->prepare($consultasql);
         $enlaceDatos->bindParam(":correo",$gmail,PDO::PARAM_STR);
         $enlaceDatos->execute();
@@ -19,11 +19,16 @@ class Usuario extends conexion{
         if(password_verify($password,$usuario['hash_pass']))
         {
             $usuariocorrecto[]=$usuario;
+            $usuariocorrecto['rol']=$usuario['rol'];
+            $usuariocorrecto['avatar']=$usuario['avatar'];
+            //$_SESSION["usuarios"]['nombre'][]=$usuario['nombre'];
+            //echo  $_SESSION["usuarios"]['nombre'];
         }else{
             $usuariocorrecto=false;
         }
         $conexion=null;
         return $usuariocorrecto;
+       // return $_SESSION["usuarios"];
     }catch(PDOException $e){
         exit("Error: ".$e->getMessage());
     }
