@@ -71,5 +71,58 @@ class peliculas extends conexion_2{
             echo "Error:" .$e->getMessage();
         }
     }
+    public function mostrarActores($id)
+    {
+        try
+        {
+            $tipo="actor";
+            $instancia=new conexion_2();
+            $conexion=$instancia->conexion;
+            $consultasql="select personalc.nombre as nombre, personalc.imagen as imagen from peliculasc INNER JOIN peliculas_personalc on peliculasc.id=peliculas_personalc.pelicula_id INNER JOIN personalc on personalc.id=peliculas_personalc.personal_id where personalc.tipo=:tipo and peliculasc.id=:id";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":id",$id,PDO::PARAM_INT);
+            $enlaceDatos->bindParam(":tipo",$tipo,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            unset($_SESSION['actores']);
+            while($row = $enlaceDatos->fetch(PDO::FETCH_ASSOC)){
+                $nombre=$row["nombre"];
+                $imagen=$row["imagen"];
+                //Agregar informacion a las variables de sesión.
+                $_SESSION['actores']['imagen'][]=$imagen;
+                $_SESSION['actores']['nombre'][]=$nombre;
+
+            }
+            $conexion=null;
+            return $_SESSION['actores'];
+        }catch(PDOException $e){
+            echo "Error:" .$e->getMessage();
+        }
+    }
+    public function mostrarActriz($id)
+    {
+        try
+        {
+            $tipo="actriz";
+            $instancia=new conexion_2();
+            $conexion=$instancia->conexion;
+            $consultasql="select personalc.nombre as nombre, personalc.imagen as imagen from peliculasc INNER JOIN peliculas_personalc on peliculasc.id=peliculas_personalc.pelicula_id INNER JOIN personalc on personalc.id=peliculas_personalc.personal_id where personalc.tipo=:tipo and peliculasc.id=:id";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":id",$id,PDO::PARAM_INT);
+            $enlaceDatos->bindParam(":tipo",$tipo,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            unset($_SESSION['actrices']);
+            while($row = $enlaceDatos->fetch(PDO::FETCH_ASSOC)){
+                $nombre=$row["nombre"];
+                $imagen=$row["imagen"];
+                //Agregar informacion a las variables de sesión.
+                $_SESSION['actrices']['imagen'][]=$imagen;
+                $_SESSION['actrices']['nombre'][]=$nombre;
+            }
+            $conexion=null;
+            return $_SESSION['actrices'];
+        }catch(PDOException $e){
+            echo "Error:" .$e->getMessage();
+        }
+    }
 }
 ?>
