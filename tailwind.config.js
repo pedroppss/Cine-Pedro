@@ -15,6 +15,9 @@ module.exports = {
         button_gray:'#FFFFFF4D',
         button_gray_2:'#FFFFFF1A',
         button_gray_3:'#FFFFFF66',
+        button_gray_4:'#FFFFFF26',
+        p_rose:'#FF2C78',
+        p_rose_2:'#FF2C7880',
         fond_film:'#EBEBEB4D',
         button:'#8F8F8F66',
         
@@ -23,7 +26,8 @@ module.exports = {
         color_button:'#EEEEEE',
         color_button_2:'#CECECE',
         color_gray:'#9E9E9E',
-        color_gray_2:'#D8D8D8'
+        color_gray_2:'#D8D8D8',
+        color_white:'#F0F0F0',
       },
       fontFamily:{
         'poppins':['Poppins']
