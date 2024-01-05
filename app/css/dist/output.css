@@ -617,6 +617,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.ml-56{
+  margin-left: 14rem;
+}
+
 .ml-6{
   margin-left: 1.5rem;
 }
@@ -691,6 +695,70 @@ video {
 
 .mt-9{
   margin-top: 2.25rem;
+}
+
+.ml-60{
+  margin-left: 15rem;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.ml-12{
+  margin-left: 3rem;
+}
+
+.mr-14{
+  margin-right: 3.5rem;
+}
+
+.mr-36{
+  margin-right: 9rem;
+}
+
+.mr-40{
+  margin-right: 10rem;
+}
+
+.mr-56{
+  margin-right: 14rem;
+}
+
+.mr-64{
+  margin-right: 16rem;
+}
+
+.mr-72{
+  margin-right: 18rem;
+}
+
+.mr-80{
+  margin-right: 20rem;
+}
+
+.mr-96{
+  margin-right: 24rem;
+}
+
+.ml-80{
+  margin-left: 20rem;
+}
+
+.ml-11{
+  margin-left: 2.75rem;
+}
+
+.ml-40{
+  margin-left: 10rem;
+}
+
+.ml-32{
+  margin-left: 8rem;
+}
+
+.ml-28{
+  margin-left: 7rem;
 }
 
 .flex{
@@ -781,6 +849,10 @@ video {
   height: 43rem;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .w-1000{
   width: 1395.871px;
 }
@@ -849,6 +921,10 @@ video {
   width: 2.25rem;
 }
 
+.w-11{
+  width: 2.75rem;
+}
+
 .max-w-screen-2xl{
   max-width: 1536px;
 }
@@ -863,6 +939,10 @@ video {
 
 .content-around{
   align-content: space-around;
+}
+
+.justify-normal{
+  justify-content: normal;
 }
 
 .justify-start{
@@ -941,6 +1021,14 @@ video {
   background-color: #FFFFFF1A;
 }
 
+.bg-button_gray_3{
+  background-color: #FFFFFF66;
+}
+
+.bg-button_gray_4{
+  background-color: #FFFFFF26;
+}
+
 .bg-fond_black{
   --tw-bg-opacity: 1;
   background-color: rgb(2 5 16 / var(--tw-bg-opacity));
@@ -963,9 +1051,18 @@ video {
   background-color: #FFFFFF33;
 }
 
+.bg-p_rose{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 44 120 / var(--tw-bg-opacity));
+}
+
 .bg-rose-600{
   --tw-bg-opacity: 1;
   background-color: rgb(225 29 72 / var(--tw-bg-opacity));
+}
+
+.bg-p_rose_2{
+  background-color: #FF2C7880;
 }
 
 .bg-personalized{
@@ -1066,6 +1163,11 @@ video {
 .text-color_gray_2{
   --tw-text-opacity: 1;
   color: rgb(216 216 216 / var(--tw-text-opacity));
+}
+
+.text-color_white{
+  --tw-text-opacity: 1;
+  color: rgb(240 240 240 / var(--tw-text-opacity));
 }
 
 .text-white{
