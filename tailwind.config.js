@@ -59,6 +59,7 @@ module.exports = {
         '1001':'1361px',
         '1361':'1361px',
         '1002':'1400.872px',
+        '1500':'1500px',
       },
       margin:{
         'personalized':'33rem',
