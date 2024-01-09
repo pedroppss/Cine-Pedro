@@ -39,5 +39,35 @@ class controllersUsuario{
     public function recuperarPassword(){
         include "../views/recuperarPassword.php";
     }
+    public function añadirPelicula(){
+        /*
+        $existe=false;
+        $error="";
+        if(isset($_REQUEST["nombrePelicula"]) && isset($_REQUEST["argumento"]) && isset($_REQUEST["clasificacion"]) && isset($_REQUEST["año"])
+            && isset($_REQUEST["duracion"]) && isset($_REQUEST["edad"]) && isset($_REQUEST["genero_id"]))
+        {
+        */
+            include "../views/anadirPelicula.php";
+            $usuario=new Usuario();
+            $_SESSION['usuarios']=$usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
+            $_REQUEST['genero_id']);
+            //$error="Pelicula creada";
+
+        //}
+    }
+    public function eliminarPelicula()
+    {
+        include "../views/borrarPelicula.php";
+        $usuario=new Usuario();
+        $_SESSION['usuarios']=$usuario->eliminar($_REQUEST['nombrePelicula']);
+        
+            
+    }
+    public function editarPelicula()
+    {
+        include "../views/editarPelicula.php";
+        $usuario=new Usuario();
+        $_SESSION['usuarios']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento']);
+    }
 }
 ?>
