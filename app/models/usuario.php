@@ -54,6 +54,61 @@ class Usuario extends conexion{
             exit("Error:".$e->getMessage());
         }
    }
+   public function añadir($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id)
+   {
+        try
+        {
+            $instancia=new Usuario();
+            $conexion=$instancia->conexion;
+            $consultasql="insert into peliculasc (nombre,clasificacion,año,duracion,argumento,clasificacion_edad,genero_id) values (:nombre,:clasif,:ano,:duracion,:argumento,:edad,:genero)";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":nombre",$nombrePelicula,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":clasif",$clasificacion,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":ano",$ano,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":duracion",$duracion,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":argumento",$argumento,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":edad",$edad,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":genero",$genero_id,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            $enlaceDatos->fetch(PDO::PARAM_STR);
+        }catch(PDOException $e)
+        {
+            exit("Error:" .$e->getMessage());
+        }
+   }
+   public function eliminar($nombrePelicula)
+   {
+    try
+    {
+        $instancia=new Usuario();
+        $conexion=$instancia->conexion;
+        $consultasql="delete from peliculasc where nombre=:nombre";
+        $enlaceDatos=$conexion->prepare($consultasql);
+        $enlaceDatos->bindParam(":nombre",$nombrePelicula,PDO::PARAM_STR);
+        $enlaceDatos->execute();
+        $enlaceDatos->fetch(PDO::PARAM_STR);
 
+    }catch(PDOException $e)
+    {
+        exit("Error:" .$e->getMessage());
+    }
+   }
+   public function editar($nombrePelicula,$argumento)
+   {
+        try
+        {
+            $instancia=new Usuario();
+            $conexion=$instancia->conexion;
+            $consultasql="update peliculasc set argumento=:argumento  where nombre=:nombre ";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":nombre",$nombrePelicula,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":argumento",$argumento,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            $enlaceDatos->fetch(PDO::PARAM_STR);
+        }catch(PDOException $e)
+        {
+            exit("Error:" .$e->getMessage());
+        }
+   }
 }
 ?>
