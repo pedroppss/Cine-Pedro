@@ -286,5 +286,5 @@
                 </div>
         </div> 
     </div>
-    <a href="index.php?ctl=default" class="bg-button w-1361 h-87 ml-16 mt-20 mb-16 rounded-md text-white text-3xl" type="button"><p class="text-center mt-5">Show more</p></a>
+    <a href="index.php?ctl=default" class="bg-button w-1361 h-87 ml-16 mt-20 mb-16 rounded-md text-white text-3xl border-[1px] border-gray" type="button"><p class="text-center mt-5">Show more</p></a>
 </section>

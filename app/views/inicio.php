@@ -17,7 +17,7 @@
                     <li>16+</li>
                 </ul>
                 <div class="flex gap-4 justify-end">
-                    <h1 class="text-color_gray font-normal text-xl font-poppins">Director: </h1>
+                    <h1 class="text-color_gray font-normal text-xl font-poppins">Director:</h1>
                     <p class="text-white font-normal text-xl font-poppins">Louis Leterrier</p>
                 </div>
             </div>
@@ -136,5 +136,5 @@
         </div> 
     </div>
     <img src="app/images/carteles/portal_lamborghini.png" class="w-1001 h-684 ml-16 mt-10" style="">
-    <a href="index.php?ctl=inicio_2" class="bg-button w-1361 h-87 ml-16 mt-20 mb-16 rounded-md text-white text-3xl" type="button"><p class="text-center mt-5">Show more</p></a>
+    <a href="index.php?ctl=inicio_2" class="bg-button w-1361 h-87 ml-16 mt-20 mb-16 rounded-md text-white text-3xl border-[1px] border-gray" type="button"><p class="text-center mt-5">Show more</p></a>
 </section>

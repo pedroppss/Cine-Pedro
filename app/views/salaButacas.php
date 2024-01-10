@@ -172,7 +172,7 @@
             <a href=""><img src="app/images/salaButacas/butaca1.png" class="w-11 h-10"></a>
         </div>
     </div>
-    <div class="flex gap-2 mt-5 ml-40">
+    <div class="flex gap-2 mt-5 ml-[165px]">
             <a href=""><img src="app/images/salaButacas/butaca2.png" class="w-11 h-10"></a>
             <a href=""><img src="app/images/salaButacas/butaca2.png" class="w-11 h-10"></a>
             <a href=""><img src="app/images/salaButacas/butaca2.png" class="w-11 h-10"></a>
@@ -200,15 +200,15 @@
     <div class="flex gap-20  justify-center mt-20 mb-20">
         <div>
             <img src="app/images/salaButacas/Unavailable.png" class="w-11 h-10">
-            <p class="text-white font-poppins font-normal text-sm">Unavailable</p>
+            <p class="text-white font-poppins font-normal text-sm -ml-[17px]">Unavailable</p>
         </div>
         <div>
             <img src="app/images/salaButacas/Available.png" class="w-11 h-10">
-            <p class="text-white font-poppins font-normal text-sm">Available</p>
+            <p class="text-white font-poppins font-normal text-sm -ml-[8px]">Available</p>
         </div>
         <div>
             <img src="app/images/salaButacas/Selected.png" class="w-11 h-10">
-            <p class="text-white font-poppins font-normal text-sm">Selected</p>
+            <p class="text-white font-poppins font-normal text-sm -ml-[8px]">Selected</p>
         </div>
     </div>
     <a href="index.php?ctl=factura" class="bg-p_rose w-1500 h-87 ml-8 mt-20 mb-16 rounded-md text-white text-3xl" type="button"><p class="text-center mt-5">Comprar</p></a>

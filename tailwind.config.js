@@ -20,6 +20,9 @@ module.exports = {
         p_rose_2:'#FF2C7880',
         fond_film:'#EBEBEB4D',
         button:'#8F8F8F66',
+        shade_300:'rgba(189, 197, 212, 1)',
+        checkbox_black:'rgba(2, 5, 16, 0.70)',
+        royal_blue:'rgba(26, 44, 80, 1)',
         
       },
       colors:{
@@ -28,9 +31,17 @@ module.exports = {
         color_gray:'#9E9E9E',
         color_gray_2:'#D8D8D8',
         color_white:'#F0F0F0',
+        color_white_2:'rgba(255, 255, 255, 0.9)',
+        color_white_3:'rgba(255, 255, 255, 1)',
+        color_shade_900:'rgba(51, 51, 51, 1)',
+        color_shade_700:'rgba(65, 74, 99, 1)',
+        color_sky_blue:'rgba(17, 142, 234, 1)',
+        checkbox_black:'rgba(2, 5, 16, 0.7)',
+        sunshine_yellow:'rgba(255, 190, 0, 1)',
       },
       fontFamily:{
-        'poppins':['Poppins']
+        'poppins':['Poppins'],
+        'roboto':['Roboto'],
       },
       backgroundSize:{
         'personalized':'96rem'
@@ -64,6 +75,10 @@ module.exports = {
       margin:{
         'personalized':'33rem',
         '151':'151px',
+      },
+      borderColor:{
+        gray:'rgba(143, 143, 143, 0.40)', 
+        gray_factura:'#C4C4C4',
       }
     },
   },

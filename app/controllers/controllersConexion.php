@@ -1,6 +1,7 @@
 <?php
     include "../controllers/controllersUsuario.php";
     
+    
     $accion=$_REQUEST['ctl'] ?? 'login';
     switch ($accion) {
         case 'login':

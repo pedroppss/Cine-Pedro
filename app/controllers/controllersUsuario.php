@@ -18,9 +18,10 @@ class controllersUsuario{
                 include "../views/pagcliente.php";
             }else{
                 include "../views/pagadmin.php";
+                //var_dump($_SESSION["usuarios"]);
+                //var_dump($_SESSION["usuarios"]['avatar']);
             }
             
-            //var_dump($_SESSION["usuarios"]['rol']);
         }
         
     }
@@ -29,7 +30,15 @@ class controllersUsuario{
         include "../views/login_register_header.php";
         include "../views/register.php";
         $usuario=new Usuario();
+        if(!isset($_REQUEST['nombre']) || !isset($_REQUEST['apellidos']) || !isset($_REQUEST['password']) || !isset($_REQUEST['nif']) || !isset($_REQUEST['gmail']))
+        {
+            echo "Todos los campos debe ser obligatorios";
+
+        }else{
+            
         $_SESSION['usuarios']=$usuario->registar($_REQUEST['nombre'],$_REQUEST['apellidos'],$_REQUEST['password'],$_REQUEST['nif'],$_REQUEST['gmail']);
+        //ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$_REQUEST['gmail']);
+        }
     }
     public function logout(){
         session_destroy();

@@ -3,9 +3,9 @@
                 <a href="login_register.php?ctl=login"><img class="-ml-20 -mt-16"  src="../images/register/vector.png" alt="vector"></a>
                     <form action="login_register.php?ctl=borrar" method="POST" class="-mt-[41px]">
                         <h1 class="text-3xl font-normal text-white font-poppins">Eliminar una Pelicula</h1>
-                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins" type="text" name="nombrePelicula" id="nombrePelicula" placeholder="Introduce el nombre de la pelicula que quieres eliminar">  
+                        <input class="w-300 h-12 mt-3 bg-fond_black_2 rounded text-base font-normal font-poppins text-white" type="text" name="nombrePelicula" id="nombrePelicula" placeholder="Introduce el nombre de la pelicula que quieres eliminar">  
                         <br>
-                        <button class="w-300 h-12 mt-7 bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="eliminar" value="eliminar">Eliminar</button>
+                        <button class="w-300 h-12 mt-7 bg-rose-600 text-2xl font-normal text-white font-poppins " type="submit" name="eliminar" value="eliminar">Eliminar</button>
                     </form>
                 </div>   
 </main>

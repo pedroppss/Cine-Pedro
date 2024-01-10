@@ -1,5 +1,7 @@
 <?php
 include_once "conexion.php";
+include "../controllers/controllersCorreo.php";
+
 class Usuario extends conexion{
    public function __construct()
    {
@@ -21,7 +23,7 @@ class Usuario extends conexion{
             $usuariocorrecto[]=$usuario;
             $usuariocorrecto['rol']=$usuario['rol'];
             $usuariocorrecto['avatar']=$usuario['avatar'];
-            //$_SESSION["usuarios"]['nombre'][]=$usuario['nombre'];
+            $usuariocorrecto['nombre']=$usuario['nombre'];
             //echo  $_SESSION["usuarios"]['nombre'];
         }else{
             $usuariocorrecto=false;
@@ -49,6 +51,9 @@ class Usuario extends conexion{
             $enlaceDatos->bindParam(":correo",$gmail,PDO::PARAM_STR);
             $enlaceDatos->execute();
             $enlaceDatos->fetch(PDO::PARAM_STR);
+            ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$gmail);
+
+
         }catch(PDOException $e)
         {
             exit("Error:".$e->getMessage());

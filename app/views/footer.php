@@ -1,4 +1,4 @@
-<footer class="container max-w-screen-2xl mx-auto">
+<footer class="container max-w-screen-2xl mx-auto mt-[51px]">
     <div class="flex justify-center gap-6">
         <img src="app/images/footers/instagram.png" style="width: 24px;height: 24px;" alt="instagram">
         <img src="app/images/footers/twiiter.png" style="width: 24px;height: 24px;" alt="instagram">
