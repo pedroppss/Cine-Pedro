@@ -1,6 +1,13 @@
 <?php
 include "app/models/peliculas.php";
 class controllersPeliculas{
+    /*
+    public function listar(){
+        $peli=new peliculas();
+        $_SESSION['peliculas']=$peli->listarPeliculas();
+        var_dump($_SESSION['peliculas']);
+    }
+    */
     public function mostrar_fast_furious(){
         //$id=(isset($_GET["id"]) ? intval($_GET["id"]):0);
         //if($id==2){
