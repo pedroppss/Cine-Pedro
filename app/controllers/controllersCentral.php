@@ -1,3 +1,4 @@
+//un controllers para la informacion de la Peliculas, las butacas y la factura
 <?php
     include "controllersPeliculas.php";
     $accion=$_REQUEST['ctl'] ?? 'default';
@@ -59,6 +60,7 @@
             break;
         default:
             include "app/views/inicio.php";
+            //(new controllersPeliculas())->listar();
             //unset($_SESSION['peliculas']);
             break;
     }
