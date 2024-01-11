@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
             <a href="login_register.php?ctl=añadir">Añadir una nueva pelicula</a>
             <a href="login_register.php?ctl=eliminar">Eliminar una pelicula</a>
             <a href="login_register.php?ctl=editar">Editar una pelicula</a>
+            <a href="login_register.php?ctl=adminPrincipal">Admin</a>
         </div>
    </header>
    <main class="bg-no-repeat bg-personalized h-personalized grid content-around justify-around" style="background-image: url(../images/login/fondo-imagenes.png);">
