@@ -1,7 +1,6 @@
+// un controllers para el login, registrar usuario , editar Peliculas, listarPeliculas , listarUsuarios
 <?php
     include "../controllers/controllersUsuario.php";
-    
-    
     $accion=$_REQUEST['ctl'] ?? 'login';
     switch ($accion) {
         case 'login':
@@ -24,6 +23,19 @@
             break;
         case 'recuperarPassword':
             (new controllersUsuario())->recuperarPassword();
+            break;
+        case 'adminPrincipal':
+            include "../../admin/html/index.php";
+            break;
+        case 'peliculas':
+            (new controllersUsuario())->listarPeliculas();
+            break;
+        case 'usuarios':
+            (new controllersUsuario())->listarUsuarios();
+            break;
+        case 'actoresactricesdirectores':
+            (new controllersUsuario())->listarActoresActricesDirector();
+            break;
         default:
             break;
     }
