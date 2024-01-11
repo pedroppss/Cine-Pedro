@@ -2,9 +2,9 @@
                     <div class="container-lg wide-xl">
                         <div class="nk-header-wrap">
                             <div class="nk-header-brand">
-                                <a href="html/index.html" class="logo-link">
-                                    <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                <a href="app/views/login_register.php?ctl=adminPrincipal" class="logo-link">
+                                    <img class="logo-light logo-img" src="./admin/images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="./admin/images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-menu">
@@ -57,7 +57,7 @@
                                 </ul><!-- .nk-menu -->
                             </div><!-- .nk-header-menu -->
                             <div class="nk-header-tools">
-                                <ul class="nk-quick-nav">
+                                <ul class="nk-quick-nav">   
                                     <li class="dropdown language-dropdown d-none d-sm-block me-n1">
                                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
                                             <div class="quick-icon border border-light">
@@ -166,7 +166,7 @@
                                         </div>
                                     </li><!-- .dropdown -->
                                     <li class="dropdown user-dropdown">
-                                        <a href="#" class="dropdown-toggle me-lg-n1" data-bs-toggle="dropdown">
+                                        <a href="app/views/login_register.php?ctl=login" class="dropdown-toggle me-lg-n1" data-bs-toggle="dropdown"> <!--Va a pagADMIN -->
                                             <div class="user-toggle">
                                                 <div class="user-avatar sm">
                                                     <em class="icon ni ni-user-alt"></em>
