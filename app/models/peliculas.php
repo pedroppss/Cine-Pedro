@@ -5,6 +5,7 @@ class peliculas extends conexion_2{
     {
         parent::__construct();
     }
+   
     public function mostrarImagenes($id)
     {
         try
