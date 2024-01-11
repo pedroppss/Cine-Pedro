@@ -6,7 +6,5 @@
     <link rel="stylesheet" href="../css/dist/output.css" type="text/css"/>
         <title></title>
 </head>
-<body class="container max-w-screen-2xl mx-auto bg-fond_black">
     <?php include ("../controllers/controllersConexion.php") ?>;
-</body>
 </html>
