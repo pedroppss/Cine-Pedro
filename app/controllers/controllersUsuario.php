@@ -37,7 +37,7 @@ class controllersUsuario{
         }else{
             
         $_SESSION['usuarios']=$usuario->registar($_REQUEST['nombre'],$_REQUEST['apellidos'],$_REQUEST['password'],$_REQUEST['nif'],$_REQUEST['gmail']);
-        //ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$_REQUEST['gmail']);
+        ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$_REQUEST['gmail']);
         }
     }
     public function logout(){
@@ -77,6 +77,29 @@ class controllersUsuario{
         include "../views/editarPelicula.php";
         $usuario=new Usuario();
         $_SESSION['usuarios']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento']);
+    }
+    public function listarPeliculas(){
+        include "../../admin/html/listado.php";
+        $usuario=new Usuario();
+        $_SESSION['peliculas']=$usuario->listarPeliculas();
+        //var_dump($_SESSION['peliculas']);
+    }
+    public function listarUsuarios(){
+        include "../../admin/html/listadoUsuario.php";
+        $usuario=new Usuario();
+        $_SESSION['usuarios']=$usuario->listarUsuarios();
+        //var_dump($_SESSION['usuarios']);
+    }
+    public function listarActoresActricesDirector()
+    {
+        include "../../admin/html/listadoActoresActricesDirectores.php";
+        $usuario=new Usuario();
+        $_SESSION['actores']=$usuario->listarActores();
+        $_SESSION['actrices']=$usuario->listarActrices();
+        $_SESSION['directores']=$usuario->listarDirector();
+        //var_dump($_SESSION['actores']);
+        //var_dump($_SESSION['actrices']);
+        //var_dump($_SESSION['directores']);
     }
 }
 ?>
