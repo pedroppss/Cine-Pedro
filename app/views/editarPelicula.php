@@ -1,3 +1,5 @@
+
+<body class="container max-w-screen-2xl mx-auto bg-fond_black">
 <main class="bg-no-repeat bg-personalized h-personalized grid content-around justify-around mt-[103px]" style="background-image: url(../images/login/fondo-imagenes.png);">              
                 <div class="p-24 w-500 h-[306px] rounded-2xl bg-fond_transp"> 
                 <a href="login_register.php?ctl=login"><img class="-ml-20 -mt-16"  src="../images/register/vector.png" alt="vector"></a>
@@ -11,3 +13,4 @@
                     </form>
                 </div>      
 </main>
+</body>
