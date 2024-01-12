@@ -26,7 +26,9 @@
                     <form action="login_register.php?ctl=recuperarPassword" method="POST">
                         <button class="text-white text-base mt-5 ml-16 font-normal font-poppins"  type="submit" href="#">¿Has olvidado tu contraseña?</button> 
                     </form>
+                    <div class="text-red-600"><?=$error?></div>
             </div>
+           
     </main>
 </body>
 <!--

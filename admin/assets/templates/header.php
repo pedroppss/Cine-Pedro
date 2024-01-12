@@ -1,19 +1,20 @@
-<div class="nk-header nk-header-fixed is-light">
-                    <div class="container-lg wide-xl">
+<div class="nk-header nk-header-fixed is-light ">
+                    <div class="container-lg wide-xl ">
                         <div class="nk-header-wrap">
                             <div class="nk-header-brand">
                                 <a href="app/views/login_register.php?ctl=adminPrincipal" class="logo-link">
-                                    <img class="logo-light logo-img" src="./admin/images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="./admin/images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                    <img style="width: 179.23px ; height: 55px;" src="app/images/headers/logo.png"  alt="logo">
                                 </a>
                             </div><!-- .nk-header-brand -->
+                            
                             <div class="nk-header-menu">
                                 <ul class="nk-menu nk-menu-main">
                                     <li class="nk-menu-item">
-                                        <a href="html/index.html" class="nk-menu-link">
-                                            <span class="nk-menu-text">Overview</span>
+                                        <a href="index.php" class="nk-menu-link">
+                                            <span class="nk-menu-text">Home</span>
                                         </a>
-                                    </li><!-- .nk-menu-item -->
+                                    </li>
+                                    <!--
                                     <li class="nk-menu-item has-sub">
                                         <a href="#" class="nk-menu-link nk-menu-toggle">
                                             <span class="nk-menu-text">Apps</span>
@@ -37,23 +38,22 @@
                                             <li class="nk-menu-item">
                                                 <a href="html/apps-kanban.html" class="nk-menu-link"><span class="nk-menu-text">Kanban Board</span></a>
                                             </li>
-                                        </ul><!-- .nk-menu-sub -->
-                                    </li><!-- .nk-menu-item -->
+                                        </ul>
+                                    </li>
                                     <li class="nk-menu-item">
                                         <a href="html/components.html" class="nk-menu-link">
                                             <span class="nk-menu-text">Components</span>
                                         </a>
-                                    </li><!-- .nk-menu-item -->
+                                    </li>
                                     <li class="nk-menu-item">
                                         <a href="html/support-kb.html" class="nk-menu-link">
                                             <span class="nk-menu-text">Support</span>
                                         </a>
-                                    </li><!-- .nk-menu-item -->
+                                    </li>
                                     <li class="nk-menu-item">
                                         <a href="html/pages/contact.html" class="nk-menu-link">
-                                            <span class="nk-menu-text">Contact</span>
-                                        </a>
-                                    </li><!-- .nk-menu-item -->
+                                            <span class="nk-menu-text">
+                                    -->
                                 </ul><!-- .nk-menu -->
                             </div><!-- .nk-header-menu -->
                             <div class="nk-header-tools">

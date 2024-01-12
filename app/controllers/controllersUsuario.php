@@ -3,26 +3,41 @@ include "../models/usuario.php";
 class controllersUsuario{
     public function login()
     {
+        $encontrado=false;
+        $error="";
         isset($_SESSION)?:session_start();
-        $usuario=new Usuario();
-        $_SESSION['usuarios']=$usuario->login($_REQUEST['gmail'],$_REQUEST['password']);
-        if($_SESSION['usuarios']==false)
+       
+        if(empty($_REQUEST['gmail']) && empty($_REQUEST['password']))
         {
-            //var_dump('no conectado');
+            
             include "../views/login_register_header.php";
             include "../views/login.php";
-        }else
-        {
-            if($_SESSION["usuarios"]["rol"]=="cliente"){
-
-                include "../views/pagcliente.php";
-            }else{
-                include "../views/pagadmin.php";
-                //var_dump($_SESSION["usuarios"]);
-                //var_dump($_SESSION["usuarios"]['avatar']);
-            }
-            
+            $error= "Debes introducir el email y la contraseña que son obligatorios";
+            return;
         }
+
+        $usuario=new Usuario();
+        $_SESSION['usuarios']=$usuario->login($_REQUEST['gmail'],$_REQUEST['password']);
+
+        if($_SESSION['usuarios']==false)
+            {
+                //var_dump('no conectado');
+                
+                include "../views/login_register_header.php";
+                include "../views/login.php";
+            }else
+            {
+                $encontrado=true;
+                if($_SESSION["usuarios"]["rol"]=="cliente"){
+
+                    include "../views/pagcliente.php";
+                }else{
+                    include "../views/pagadmin.php";
+                    //var_dump($_SESSION["usuarios"]);
+                    //var_dump($_SESSION["usuarios"]['avatar']);
+                }
+            
+            }   
         
     }
     public function registarUsuario()
@@ -37,7 +52,7 @@ class controllersUsuario{
         }else{
             
         $_SESSION['usuarios']=$usuario->registar($_REQUEST['nombre'],$_REQUEST['apellidos'],$_REQUEST['password'],$_REQUEST['nif'],$_REQUEST['gmail']);
-        ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$_REQUEST['gmail']);
+        //ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$_REQUEST['gmail']);
         }
     }
     public function logout(){
@@ -49,34 +64,60 @@ class controllersUsuario{
         include "../views/recuperarPassword.php";
     }
     public function añadirPelicula(){
-        /*
-        $existe=false;
-        $error="";
-        if(isset($_REQUEST["nombrePelicula"]) && isset($_REQUEST["argumento"]) && isset($_REQUEST["clasificacion"]) && isset($_REQUEST["año"])
-            && isset($_REQUEST["duracion"]) && isset($_REQUEST["edad"]) && isset($_REQUEST["genero_id"]))
-        {
-        */
-            include "../views/anadirPelicula.php";
+            include "../../admin/html/CrearPelicula.php";
             $usuario=new Usuario();
-            $_SESSION['usuarios']=$usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
-            $_REQUEST['genero_id']);
-            //$error="Pelicula creada";
-
-        //}
+            if(!empty($_REQUEST['nombrePelicula']) && !empty($_REQUEST['argumento']) && !empty($_REQUEST['clasificacion']) && !empty($_REQUEST['ano']) && !empty($_REQUEST['duracion']) && !empty($_REQUEST['edad'])
+            && !empty($_REQUEST['genero_id']))
+            {
+                $_SESSION['usuarios']=$usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
+                $_REQUEST['genero_id']);
+            }else{
+                echo "debes introducir todos los campos que son obligatorios";
+            }
     }
     public function eliminarPelicula()
     {
-        include "../views/borrarPelicula.php";
+        include "../../admin/html/borrarPelicula.php";
         $usuario=new Usuario();
-        $_SESSION['usuarios']=$usuario->eliminar($_REQUEST['nombrePelicula']);
-        
-            
+        if(!empty($_REQUEST['nombrePelicula']))
+        {
+            $_SESSION['pelicula']=$usuario->eliminar($_REQUEST['nombrePelicula']);     
+            echo "Se ha borrado la pelicula correctamente";
+
+        }else{
+            echo "No se ha borrado la pelicula";
+        }
+               
+    }
+    public function eliminarUsuario()
+    {
+        include "../../admin/html/borrarUsuario.php";
+        $usuario=new Usuario();
+        if(!empty($_REQUEST['nombreUsuario']))
+        {
+            $usuario->eliminarusuario($_REQUEST['nombreUsuario']);     
+            echo "Se ha borrado el usuario correctamente";
+
+        }else{
+            echo "No se ha borrado el usuario";
+        }
     }
     public function editarPelicula()
     {
-        include "../views/editarPelicula.php";
+        include "../../admin/html/editarPelicula.php";
         $usuario=new Usuario();
-        $_SESSION['usuarios']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento']);
+        if(!empty($_REQUEST['nombrePelicula']) && !empty($_REQUEST['argumento']) && !empty($_REQUEST['clasificacion']) && !empty($_REQUEST['ano']) && !empty($_REQUEST['duracion']) && !empty($_REQUEST['edad'])
+            && !empty($_REQUEST['genero_id']))
+            {
+                $_SESSION['pelicula']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
+                $_REQUEST['genero_id']);
+                echo "Se ha editado la pelicula exitosamente";
+            }
+            else{
+                echo "No se ha editado la pelicula";
+            }
+            
+        //$_SESSION['usuarios']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento']);
     }
     public function listarPeliculas(){
         include "../../admin/html/listado.php";

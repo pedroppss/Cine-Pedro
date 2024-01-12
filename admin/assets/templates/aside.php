@@ -1,5 +1,5 @@
-<div class="nk-aside" data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
-                                <div class="nk-sidebar-menu" data-simplebar>
+<div class="nk-aside " data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
+                                <div class="nk-sidebar-menu " data-simplebar>
                                     <ul class="nk-menu nk-menu-main">
                                         <li class="nk-menu-item">
                                             <a href="html/index.html" class="nk-menu-link">
@@ -58,7 +58,7 @@
                                             </a>
                                             <ul class="nk-menu-sub">
                                                 <li class="nk-menu-item">
-                                                    <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Project Cards</span></a>
+                                                    <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Crear Peliculas</span></a>
                                                 </li>
                                                 <li class="nk-menu-item">
                                                     <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>

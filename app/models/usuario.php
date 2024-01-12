@@ -35,6 +35,7 @@ class Usuario extends conexion{
         exit("Error: ".$e->getMessage());
     }
    }
+   //registrar un usuario
    public function registar($nombre,$apellidos,$password,$nif,$gmail)
    {
         try
@@ -51,7 +52,7 @@ class Usuario extends conexion{
             $enlaceDatos->bindParam(":correo",$gmail,PDO::PARAM_STR);
             $enlaceDatos->execute();
             $enlaceDatos->fetch(PDO::PARAM_STR);
-            ControllerCorreo::enviarCorreo("pedroentornocliente@gmail.com",$gmail);
+            ControllerCorreo::enviarCorreo($gmail);
 
 
         }catch(PDOException $e)
@@ -59,6 +60,7 @@ class Usuario extends conexion{
             exit("Error:".$e->getMessage());
         }
    }
+   //Añadir una pelicula
    public function añadir($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id)
    {
         try
@@ -81,6 +83,7 @@ class Usuario extends conexion{
             exit("Error:" .$e->getMessage());
         }
    }
+   //eliminar una pelicula
    public function eliminar($nombrePelicula)
    {
     try
@@ -98,16 +101,41 @@ class Usuario extends conexion{
         exit("Error:" .$e->getMessage());
     }
    }
-   public function editar($nombrePelicula,$argumento)
+   //eliminar un usuario
+   public function eliminarusuario($nombreUsuario)
+   {
+    try
+    {
+        $instancia=new Usuario();
+        $conexion=$instancia->conexion;
+        $consultasql="delete from usuariosc where nombre=:nombre";
+        $enlaceDatos=$conexion->prepare($consultasql);
+        $enlaceDatos->bindParam(":nombre",$nombreUsuario,PDO::PARAM_STR);
+        $enlaceDatos->execute();
+        $enlaceDatos->fetch(PDO::PARAM_STR);
+
+    }catch(PDOException $e)
+    {
+        exit("Error:" .$e->getMessage());
+    }
+   }
+
+   //Editar una pelicula
+   public function editar($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id)
    {
         try
         {
             $instancia=new Usuario();
             $conexion=$instancia->conexion;
-            $consultasql="update peliculasc set argumento=:argumento  where nombre=:nombre ";
+            $consultasql="update peliculasc set argumento=:argumento, clasificacion=:clasif, año=:ano, duracion=:duracion , clasificacion_edad=:edad , genero_id=:genero where nombre=:nombre ";
             $enlaceDatos=$conexion->prepare($consultasql);
             $enlaceDatos->bindParam(":nombre",$nombrePelicula,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":clasif",$clasificacion,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":ano",$ano,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":duracion",$duracion,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":argumento",$argumento,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":edad",$edad,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":genero",$genero_id,PDO::PARAM_STR);
             $enlaceDatos->execute();
             $enlaceDatos->fetch(PDO::PARAM_STR);
         }catch(PDOException $e)
@@ -115,6 +143,7 @@ class Usuario extends conexion{
             exit("Error:" .$e->getMessage());
         }
    }
+   //listar todas las pelicuas que hay en la bases de datos
    public function listarPeliculas()
    {
        try
@@ -147,6 +176,7 @@ class Usuario extends conexion{
        }
 
    } 
+   //listar a todos los usuarios que hay en la base de datos
    public function listarUsuarios()
    {
        try
@@ -154,7 +184,7 @@ class Usuario extends conexion{
        $instancia=new Usuario();
        $conexion=$instancia->conexion;
        $consultasql="select usuariosc.nombre as nombre, usuariosc.apellidos as apellidos, usuariosc.avatar as avatar, usuariosc.NIF as nif,
-       usuariosc.hash_pass as contraseña, usuariosc.correo as correo, usuariosc.rol as rol from usuariosc";
+       usuariosc.hash_pass as contrasena, usuariosc.correo as correo, usuariosc.rol as rol from usuariosc";
        $enlaceDatos=$conexion->prepare($consultasql);
        $enlaceDatos->execute();
        $usuarios = array();
@@ -164,7 +194,7 @@ class Usuario extends conexion{
            'avatar' => $row["avatar"],
            'apellidos' => $row['apellidos'],
            'nif' => $row["nif"],
-           'contraseña' => $row["contraseña"],
+           'contraseña' => $row["contrasena"],
            'rol' => $row["rol"],               
            'correo' => $row["correo"]
           );
@@ -178,7 +208,8 @@ class Usuario extends conexion{
            echo "Error:" .$e->getMessage();
        }
 
-   } 
+   }
+   //lista todos los Actores que hay en la base de datos 
    public function listarActores()
    {
        try
@@ -211,6 +242,7 @@ class Usuario extends conexion{
            echo "Error:" .$e->getMessage();
        }
    }
+   //listar todos los actrices que hay en la base de datos
    public function listarActrices()
    {
        try
@@ -241,6 +273,7 @@ class Usuario extends conexion{
            echo "Error:" .$e->getMessage();
        }
    }
+   //listar a todos los directores de las peliculas que hay en la base de datos
    public function listarDirector()
    {
        try

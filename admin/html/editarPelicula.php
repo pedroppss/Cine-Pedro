@@ -36,51 +36,68 @@ session_start();
                                     <div class="components-preview wide-md mx-auto">
                                         <div class="nk-block-head nk-block-head-lg wide-sm">
                                             <div class="nk-block-head-content">
-                                                <div class="nk-block-head-sub"><a class="back-to" href="app/views/login_register.php?ctl=adminPrincipal"><em class="icon ni ni-arrow-left"></em><span>Ir a la Pagina principal</span></a></div>
-                                                <h2 class="nk-block-title fw-normal">Lista de Peliculas</h2>
+                                                <div class="nk-block-head-sub"><a class="back-to" href="app/views/login_register.php?ctl=peliculas"><em class="icon ni ni-arrow-left"></em><span>Lista de Peliculas</span></a></div>
+                                                <h2 class="nk-block-title fw-normal">Editar Pelicula</h2>
                                                 <div class="nk-block-des">
                                                     <!--<p class="lead">Using <a href="https://datatables.net/" target="_blank">DataTables</a>, add advanced interaction controls to your HTML tables. It is a highly flexible tool and all advanced features allow you to display table instantly and nice way.</p>
                                                     <p>Check out the <a href="https://datatables.net/" target="_blank">documentation</a> for a full overview.</p>-->
-                                                <p class="lead">Esto es una lista de Peliculas</p>
+                                                <p class="lead">Esto es para Editar Peliculas</p>
                                                 </div>
                                             </div>
                                         </div><!-- .nk-block-head -->
                                         <div class="nk-block nk-block-lg">
                                             <div class="nk-block-head">
                                                 <div class="nk-block-head-content">
-                                                    <h4 class="nk-block-title">Peliculas</h4>
+                                                    <h4 class="nk-block-title">Editación de Peliculas</h4>
                                                 </div>
                                             </div>
-                                            <div class="card card-bordered card-preview">
-                                                <div class="card-inner">
-                                                    <table class="datatable-init table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Cartel</th>
-                                                                <th>Nombre</th>
-                                                                <th>Clasificacion</th>
-                                                                <th>Año</th>
-                                                                <th>Duracion</th>
-                                                                <th>Argumento</th>
-                                                                <th>Clasificacion de Edad</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                           <?php foreach($_SESSION['peliculas'] as $pelicula){ ?>
-                                                            <tr>
-                                                                <td><img src="app/images/carteles/<?php echo $pelicula['imagen']?>"></td>
-                                                                <td><?php echo $pelicula['titulo'] ?></td>
-                                                                <td><?php echo $pelicula['clasif'] ?></td>
-                                                                <td><?php echo $pelicula['año'] ?></td>
-                                                                <td><?php echo $pelicula['duracion'] ?></td>
-                                                                <td><?php echo $pelicula['argumento'] ?></td>
-                                                                <td><?php echo $pelicula['edad'] ?></td>
-                                                            </tr>
-                                                           <?php } ?>
-                                                        </tbody>
-                                                    </table>
+                                            <form action="app/views/login_register.php?ctl=editar" method="POST">
+                                                    <div class="form-group">
+                                                    <label class="form-label" for="default-01">Nombre de la Pelicula para editar</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" name="nombrePelicula" id="nombrePelicula" placeholder="Nombre de la Pelicula">    
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-02">Argumento de la Pelicula</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" name="argumento" id="argumento" placeholder="argumento de la Pelicula">    
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-03">Clasificacion de la Pelicula</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" name="clasificacion" id="clasificacion" placeholder="clasificacion de la Pelicula">    
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-04">Año de la Pelicula</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" name="ano" id="ano" placeholder="año de la Pelicula">    
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-05">Edad para ver la Pelicula</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" type="text" name="edad" id="edad" placeholder="Edad de la Pelicula">  
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-06">Duracion de la Pelicula</label>
+                                                    <div class="form-control-wrap">        
+                                                    <input  class="form-control" type="text" name="duracion" id="duracion" placeholder="duracion de la Pelicula">    
+                                                    </div>
+                                                    <br>
+                                                <label class="form-label" for="default-03">Genero de la Pelicula</label>        
+                                                        <select name="genero_id" id="genero_id" placeholder="genero de la Pelicula">
+                                                            <option value="1">1-Fantasía</option>
+                                                            <option value="2">2-Acción</option>
+                                                            <option value="3">3-Drama</option>
+                                                            <option value="4">4-Ciencia Ficción</option>
+                                                            <option value="5">5-Aventuras</option>
+                                                            <option value="6">6-Monstruos</option>
+                                                            <option value="7">7-Terror</option>
+                                                            <option value="8">8-Dibujos Aminados</option>
+                                                        </select>    
+                                                    <br>
+                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Añadir</button>
                                                 </div>
-                                            </div><!-- .card-preview -->
+                                            </form>
                                         </div> <!-- nk-block -->
                                     </div><!-- .components-preview -->
                                 </div>

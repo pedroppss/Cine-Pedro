@@ -36,7 +36,7 @@ session_start();
                                     <div class="components-preview wide-md mx-auto">
                                         <div class="nk-block-head nk-block-head-lg wide-sm">
                                             <div class="nk-block-head-content">
-                                                <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Components</span></a></div>
+                                                <div class="nk-block-head-sub"><a class="back-to" href="app/views/login_register.php?ctl=adminPrincipal"><em class="icon ni ni-arrow-left"></em><span>Ir a la Página principal</span></a></div>
                                                 <h2 class="nk-block-title fw-normal">Lista de Actores, Actrices y Directores</h2>
                                                 <div class="nk-block-des">
                                                     <!--<p class="lead">Using <a href="https://datatables.net/" target="_blank">DataTables</a>, add advanced interaction controls to your HTML tables. It is a highly flexible tool and all advanced features allow you to display table instantly and nice way.</p>

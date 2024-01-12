@@ -11,8 +11,11 @@ class ControllerCorreo
 {
     //Método para enviar un correo
     //Recibe como parámetro la dirección de correo del receptor y el emisor
-    public static function enviarCorreo($receptor,$email)
+    public static function enviarCorreo($receptor)
     {
+        //var_dump($receptor);
+        //var_dump($email);
+        
         //Creamos el contenido del asunto 
         $subject = "Activacion de cuentas";
         //Cuerpo del mensaje
@@ -43,11 +46,13 @@ class ControllerCorreo
             // Para utilizar la autenticación SMTP
             $mail->SMTPAuth = true;
             // Nombre de usuario para la autenticación SMTP - usar dirección de gmail
-            $mail->Username = $email;
+            $mail->Username = "pedroentornocliente@gmail.com";
+            //$mail->Username = $gmail;
             // Password para la autenticación SMTP de aplicaciones de GMAIL           
             $mail->Password = "raqkafoltkmqajvg";//"vuestra contraseña para aplicaciones, NO sirve la contraseña de la cuenta";
             // Estableciendo como quién se va a enviar el mail
-            $emisor = $email;//'vuestra dirección de gmail';
+            $emisor ="pedroentornocliente@gmail.com";//'vuestra dirección de gmail';
+            //$emisor =$gmail;
             $mail->setFrom($emisor);
             //Nombre del emisor que aparece en el mensaje
             $mail->FromName = 'Pedro Perez Sanchez';

@@ -1,4 +1,4 @@
-//un controllers para la informacion de la Peliculas, las butacas y la factura
+<!--un controllers para la informacion de la Peliculas, las butacas y la factura-->
 <?php
     include "controllersPeliculas.php";
     $accion=$_REQUEST['ctl'] ?? 'default';
@@ -53,6 +53,7 @@
         case 'factura':
             include "app/views/facturaEntrada.php";
             break;
+        
         case 'register':
             break;
         case 'inicio_2':
