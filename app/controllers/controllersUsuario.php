@@ -67,10 +67,17 @@ class controllersUsuario{
             include "../../admin/html/CrearPelicula.php";
             $usuario=new Usuario();
             if(!empty($_REQUEST['nombrePelicula']) && !empty($_REQUEST['argumento']) && !empty($_REQUEST['clasificacion']) && !empty($_REQUEST['ano']) && !empty($_REQUEST['duracion']) && !empty($_REQUEST['edad'])
-            && !empty($_REQUEST['genero_id']))
+            && !empty($_REQUEST['genero_id']) )
             {
+
                 $_SESSION['usuarios']=$usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
                 $_REQUEST['genero_id']);
+                /*
+                $direccionImagen="../images/carteles/";
+                $file=$direccionImagen. basename($_FILES["imagen"]["name"]);
+                move_uploaded_file($_FILES["imagen"]["tmp_name"],$file);
+                echo "la pelicula se ha añadido correctamente";
+                */
             }else{
                 echo "debes introducir todos los campos que son obligatorios";
             }
@@ -102,6 +109,18 @@ class controllersUsuario{
             echo "No se ha borrado el usuario";
         }
     }
+    public function eliminarActorActrizDirector()
+    {
+        include "../../admin/html/borrarActores.php";
+        $usuario=new Usuario();
+        if(!empty($_REQUEST['nombreActorActrizDirector']))
+        {
+            $usuario->eliminaractoractrizdirector($_REQUEST['nombreActorActrizDirector']);
+            echo "Se ha borrado correctamente";
+        }else{
+            echo "No se ha borrado";
+        }
+    }
     public function editarPelicula()
     {
         include "../../admin/html/editarPelicula.php";
@@ -119,13 +138,50 @@ class controllersUsuario{
             
         //$_SESSION['usuarios']=$usuario->editar($_REQUEST['nombrePelicula'],$_REQUEST['argumento']);
     }
-    public function listarPeliculas(){
+    public function editarActorAztrizDirector()
+    {
+        include "../../admin/html/editarActores.php";
+        $usuario=new Usuario();
+        if(!empty($_REQUEST['nombreActorActrizDirector']) && !empty($_REQUEST['tipo']))
+        {
+            $usuario->editaractoractrizdirector($_REQUEST['nombreActorActrizDirector'],$_REQUEST['tipo']);
+            echo "Se ha editado exitosamente";
+        }else{
+            echo "no se ha editado";
+        }
+
+    }
+    public function crearActorAztrizDirector()
+    {
+        include "../../admin/html/crearActores.php";
+        $usuario=new Usuario();
+        if(!empty($_REQUEST['nombreActorActrizDirector']) && !empty($_REQUEST['tipo']) && !empty($_FILES['imagen']))
+        {
+            $nombreAD=$_REQUEST['nombreActorActrizDirector'];
+            $tipoAD=$_REQUEST['tipo'];
+            $imagenAD=$_FILES['imagen'];
+            if(in_array($imagenAD['type'],['image/jpeg','image/png','image/jpg']))
+            {
+                $usuario->anadiractoractrizdirector($nombreAD,$tipoAD,$imagenAD);
+            }else{
+                echo "Formato de imagen no valido";
+            }
+        }else{
+            echo "Por favor,completa todos los campos";
+        }
+
+    }
+    public function listarPeliculas()
+    {
+        isset($_SESSION)?:session_start();
         include "../../admin/html/listado.php";
         $usuario=new Usuario();
         $_SESSION['peliculas']=$usuario->listarPeliculas();
         //var_dump($_SESSION['peliculas']);
     }
-    public function listarUsuarios(){
+    public function listarUsuarios()
+    {
+        isset($_SESSION)?:session_start();
         include "../../admin/html/listadoUsuario.php";
         $usuario=new Usuario();
         $_SESSION['usuarios']=$usuario->listarUsuarios();
@@ -133,6 +189,7 @@ class controllersUsuario{
     }
     public function listarActoresActricesDirector()
     {
+        isset($_SESSION)?:session_start();
         include "../../admin/html/listadoActoresActricesDirectores.php";
         $usuario=new Usuario();
         $_SESSION['actores']=$usuario->listarActores();

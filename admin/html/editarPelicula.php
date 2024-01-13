@@ -95,7 +95,7 @@ session_start();
                                                             <option value="8">8-Dibujos Aminados</option>
                                                         </select>    
                                                     <br>
-                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Añadir</button>
+                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="editar" value="editar">Editar</button>
                                                 </div>
                                             </form>
                                         </div> <!-- nk-block -->

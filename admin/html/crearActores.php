@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 
@@ -27,58 +29,49 @@
                 <div class="nk-content ">
                     <div class="container wide-xl">
                         <div class="nk-content-inner">
-                        <?php include '../../admin/assets/templates/asidePelicula.php'; ?><!-- .nk-aside -->
+                        <?php include '../../admin/assets/templates/asideActoresActricesDirectores.php'; ?><!-- .nk-aside -->
                            <!-- .nk-aside -->
                             <div class="nk-content-body">
                                 <div class="nk-content-wrap">
                                     <div class="components-preview wide-md mx-auto">
                                         <div class="nk-block-head nk-block-head-lg wide-sm">
                                             <div class="nk-block-head-content">
-                                                <div class="nk-block-head-sub"><a class="back-to" href="app/views/login_register.php?ctl=adminPrincipal"><em class="icon ni ni-arrow-left"></em><span>Ir a la Pagina principal</span></a></div>
-                                                <h2 class="nk-block-title fw-normal">Lista de Peliculas</h2>
+                                                <div class="nk-block-head-sub"><a class="back-to" href="app/views/login_register.php?ctl=actoresactricesdirectores"><em class="icon ni ni-arrow-left"></em><span>Lista de Actores, Actrices o Directores</span></a></div>
+                                                <h2 class="nk-block-title fw-normal">Crear Actores, Actrices o Directores</h2>
                                                 <div class="nk-block-des">
                                                     <!--<p class="lead">Using <a href="https://datatables.net/" target="_blank">DataTables</a>, add advanced interaction controls to your HTML tables. It is a highly flexible tool and all advanced features allow you to display table instantly and nice way.</p>
                                                     <p>Check out the <a href="https://datatables.net/" target="_blank">documentation</a> for a full overview.</p>-->
-                                                <p class="lead">Esto es una lista de Peliculas</p>
+                                                <p class="lead">Esto es para Crear Actores, Actrices o Directores</p>
                                                 </div>
                                             </div>
                                         </div><!-- .nk-block-head -->
                                         <div class="nk-block nk-block-lg">
                                             <div class="nk-block-head">
                                                 <div class="nk-block-head-content">
-                                                    <h4 class="nk-block-title">Peliculas</h4>
+                                                    <h4 class="nk-block-title">Creación de Actores, Actrices o Directores</h4>
                                                 </div>
                                             </div>
-                                            <div class="card card-bordered card-preview">
-                                                <div class="card-inner">
-                                                    <table class="datatable-init table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Cartel</th>
-                                                                <th>Nombre</th>
-                                                                <th>Clasificacion</th>
-                                                                <th>Año</th>
-                                                                <th>Duracion</th>
-                                                                <th>Argumento</th>
-                                                                <th>Clasificacion de Edad</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                           <?php foreach($_SESSION['peliculas'] as $pelicula){ ?>
-                                                            <tr>
-                                                                <td><img src="app/images/carteles/<?php echo $pelicula['imagen']?>"></td>
-                                                                <td><?php echo $pelicula['titulo'] ?></td>
-                                                                <td><?php echo $pelicula['clasif'] ?></td>
-                                                                <td><?php echo $pelicula['año'] ?></td>
-                                                                <td><?php echo $pelicula['duracion'] ?></td>
-                                                                <td><?php echo $pelicula['argumento'] ?></td>
-                                                                <td><?php echo $pelicula['edad'] ?></td>
-                                                            </tr>
-                                                           <?php } ?>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div><!-- .card-preview -->
+                                            <form action="app/views/login_register.php?ctl=añadirActores" method="POST">
+                                            <div class="form-group">
+                                                    <label class="form-label" for="default-01">Nombre del Actor, Actriz o Director para editar</label>
+                                                    <div class="form-control-wrap">
+                                                        <input class="form-control" type="text" name="nombreActorActrizDirector" id="nombreActorActrizDirector" placeholder="Nombre del Actor, Actrices o Directores">
+                                                    </div>
+                                                    <br>
+                                                    <label class="form-label" for="default-03">tipo</label>
+                                                    <select name="tipo" id="tipo" placeholder="Tipo">
+                                                        <option value="Actor">Actor</option>
+                                                        <option value="Actriz">Actriz</option>
+                                                        <option value="Director">Director</option>
+                                                    </select>
+                                                    <br>
+                                                    <label class="form-label" for="default-04">Seleccionar una imagen para subir</label>
+                                                    <input type="file" class="upload-btn" name="imagen" id="imagen">
+                                                    <div class="selected-file"></div>
+                                                    <br>
+                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Editar</button>
+                                            </div>
+                                            </form>
                                         </div> <!-- nk-block -->
                                     </div><!-- .components-preview -->
                                 </div>

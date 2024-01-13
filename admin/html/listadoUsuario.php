@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 
@@ -66,7 +64,7 @@ session_start();
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                           <?php foreach($_SESSION['usuarios'] as $usuario){ ?>
+                                                        <?php foreach($_SESSION['usuarios'] as $usuario){ ?>
                                                             <tr>
                                                                 <td><img src="app/images/avatar/<?php echo $usuario['avatar']?>"></td>
                                                                 <td><?php echo $usuario['nombre'] ?></td>

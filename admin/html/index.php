@@ -33,7 +33,7 @@
                                     <div class="nk-block-head nk-block-head-lg">
                                         <div class="nk-block-between-md g-4">
                                             <div class="nk-block-head-content">
-                                                <h2 class="nk-block-title fw-normal">Bienvenido al Cine</h2>
+                                                <h2 class="nk-block-title fw-normal">Bienvenido al Cine, administrador/a</h2>
                                                 <div class="nk-block-des">
                                                     <p>Puedes administrar lo que quieras</p>
                                                 </div>

@@ -23,7 +23,8 @@ module.exports = {
         shade_300:'rgba(189, 197, 212, 1)',
         checkbox_black:'rgba(2, 5, 16, 0.70)',
         royal_blue:'rgba(26, 44, 80, 1)',
-        
+        button_2:'rgba(255, 255, 255, 0.30)',
+        button_3:'rgba(255, 255, 255, 0.10)',
       },
       colors:{
         color_button:'#EEEEEE',

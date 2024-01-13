@@ -83,7 +83,7 @@ session_start();
                                                     <input  class="form-control" type="text" name="duracion" id="duracion" placeholder="duracion de la Pelicula">    
                                                     </div>
                                                     <br>
-                                                <label class="form-label" for="default-03">Genero de la Pelicula</label>        
+                                                <label class="form-label" for="default-07">Genero de la Pelicula</label>        
                                                         <select name="genero_id" id="genero_id" placeholder="genero de la Pelicula">
                                                             <option value="1">1-Fantasía</option>
                                                             <option value="2">2-Acción</option>

@@ -52,7 +52,7 @@ class Usuario extends conexion{
             $enlaceDatos->bindParam(":correo",$gmail,PDO::PARAM_STR);
             $enlaceDatos->execute();
             $enlaceDatos->fetch(PDO::PARAM_STR);
-            ControllerCorreo::enviarCorreo($gmail);
+            ControllerCorreo::enviarCorreo($gmail,"pedroentornocliente@gmail.com");
 
 
         }catch(PDOException $e)
@@ -82,6 +82,33 @@ class Usuario extends conexion{
         {
             exit("Error:" .$e->getMessage());
         }
+   }
+   //Añadir un actor, un actriz o un Director
+   public function anadiractoractrizdirector($nombre,$tipo,$imagen)
+   {
+    /*
+    select personalc.nombre as nombre, 
+            personalc.imagen as imagen , personalc.tipo as tipo, peliculasc.nombre as titulo from peliculasc 
+            INNER JOIN peliculas_personalc on peliculasc.id=peliculas_personalc.pelicula_id 
+                INNER JOIN personalc on personalc.id=peliculas_personalc.personal_id where personalc.tipo='actor'";
+                */
+    try
+    {
+        $instancia=new Usuario();
+        $conexion=$instancia->conexion;
+        $consultasql="insert into personalc (nombre,tipo,imagen) values (:nombreA,:tipoA,:imagenA)";
+        $enlaceDatos=$conexion->prepare($consultasql);
+        $enlaceDatos->bindParam(":nombreA",$nombre,PDO::PARAM_STR);
+        $enlaceDatos->bindParam(":tipoA",$tipo,PDO::PARAM_STR);
+        $enlaceDatos->bindParam(":imagenA",$imagen,PDO::PARAM_STR);
+        $enlaceDatos->execute();
+        //s$enlaceDatos->fetch(PDO::PARAM_STR);
+        echo "se ha creado correctamente";
+
+    }catch(PDOException $e)
+    {
+        exit("Error:" .$e->getMessage());
+    }
    }
    //eliminar una pelicula
    public function eliminar($nombrePelicula)
@@ -118,7 +145,26 @@ class Usuario extends conexion{
     {
         exit("Error:" .$e->getMessage());
     }
+   
    }
+    //eliminar un actor, actriz o director
+    public function eliminaractoractrizdirector($nombreActores)
+    {
+        try
+    {
+        $instancia=new Usuario();
+        $conexion=$instancia->conexion;
+        $consultasql="delete from personalc where nombre=:nombre";
+        $enlaceDatos=$conexion->prepare($consultasql);
+        $enlaceDatos->bindParam(":nombre",$nombreActores,PDO::PARAM_STR);
+        $enlaceDatos->execute();
+        $enlaceDatos->fetch(PDO::PARAM_STR);
+
+    }catch(PDOException $e)
+    {
+        exit("Error:" .$e->getMessage());
+    }
+    }
 
    //Editar una pelicula
    public function editar($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id)
@@ -143,7 +189,26 @@ class Usuario extends conexion{
             exit("Error:" .$e->getMessage());
         }
    }
-   //listar todas las pelicuas que hay en la bases de datos
+   //Editar a un Actriz o Actor o Director
+   public function editaractoractrizdirector($nombreActorActrizDirector,$tipo)
+   {
+        try
+        {
+            $instancia=new Usuario();
+            $conexion=$instancia->conexion;
+            $consultasql="update personalc set tipo=:tipo where nombre=:nombre ";
+            $enlaceDatos=$conexion->prepare($consultasql);
+            $enlaceDatos->bindParam(":nombre",$nombreActorActrizDirector,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":tipo",$tipo,PDO::PARAM_STR);
+            $enlaceDatos->execute();
+            $enlaceDatos->fetch(PDO::PARAM_STR);
+
+        }catch(PDOException $e)
+        {
+            exit("Error:" .$e->getMessage());
+        }
+   }
+   //listar todas las peliculas que hay en la bases de datos
    public function listarPeliculas()
    {
        try
@@ -192,7 +257,7 @@ class Usuario extends conexion{
        $usuario =array(
            'nombre'=>$row['nombre'],
            'avatar' => $row["avatar"],
-           'apellidos' => $row['apellidos'],
+           'apellidos' => $row["apellidos"],
            'nif' => $row["nif"],
            'contraseña' => $row["contrasena"],
            'rol' => $row["rol"],               

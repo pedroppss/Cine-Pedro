@@ -4,7 +4,7 @@
         <nav class="-ml-16">
             <ul class="flex justify-start gap-12 text-white font-normal font-poppins">
                 <li><a href="index.php?ctl=default">Home</a></li>
-                <li><a href="#">Movies</a></li>
+                <li><a href="index.php?ctl=biblioteca">Movies</a></li>
                 <li><a href="#">Series</a></li> 
                 <li><a href="#">Top</a></li>
             </ul>

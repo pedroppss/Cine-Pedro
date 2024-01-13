@@ -615,10 +615,6 @@ video {
   margin-top: -4rem;
 }
 
-.-mt-\[41px\]{
-  margin-top: -41px;
-}
-
 .mb-14{
   margin-bottom: 3.5rem;
 }
@@ -771,6 +767,10 @@ video {
   margin-top: 18px;
 }
 
+.mt-\[19px\]{
+  margin-top: 19px;
+}
+
 .mt-\[22px\]{
   margin-top: 22px;
 }
@@ -891,12 +891,8 @@ video {
   height: 25px;
 }
 
-.h-\[306px\]{
-  height: 306px;
-}
-
-.h-\[571px\]{
-  height: 571px;
+.h-\[46px\]{
+  height: 46px;
 }
 
 .h-\[655px\]{
@@ -991,6 +987,10 @@ video {
   width: 106px;
 }
 
+.w-\[134px\]{
+  width: 134px;
+}
+
 .w-\[26px\]{
   width: 26px;
 }
@@ -1005,6 +1005,10 @@ video {
 
 .w-\[58px\]{
   width: 58px;
+}
+
+.w-\[99px\]{
+  width: 99px;
 }
 
 .max-w-screen-2xl{
@@ -1083,6 +1087,10 @@ video {
   gap: 12px;
 }
 
+.gap-\[15px\]{
+  gap: 15px;
+}
+
 .gap-\[16px\]{
   gap: 16px;
 }
@@ -1101,6 +1109,10 @@ video {
 
 .rounded-\[57px\]{
   border-radius: 57px;
+}
+
+.rounded-\[6\.26px\]{
+  border-radius: 6.26px;
 }
 
 .rounded-\[8px\]{
@@ -1130,6 +1142,10 @@ video {
 
 .bg-button{
   background-color: #8F8F8F66;
+}
+
+.bg-button_2{
+  background-color: rgba(255, 255, 255, 0.30);
 }
 
 .bg-button_gray{
@@ -1194,6 +1210,10 @@ video {
 
 .bg-shade_300{
   background-color: rgba(189, 197, 212, 1);
+}
+
+.bg-button_3{
+  background-color: rgba(255, 255, 255, 0.10);
 }
 
 .bg-personalized{

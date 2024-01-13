@@ -58,7 +58,7 @@ session_start();
                                                             <input  class="form-control" type="text" name="nombrePelicula" id="nombrePelicula" placeholder="Nombre de la Pelicula">    
                                                         </div>
                                                     <br>
-                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Añadir</button>
+                                                    <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="borrar" value="borrar">Borrar</button>
                                                 </div>
                                             </form>
                                         </div> <!-- nk-block -->

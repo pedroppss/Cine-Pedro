@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 
@@ -29,7 +27,7 @@ session_start();
                 <div class="nk-content ">
                     <div class="container wide-xl">
                         <div class="nk-content-inner">
-                        <?php include '../../admin/assets/templates/aside.php'; ?><!-- .nk-aside -->
+                        <?php include '../../admin/assets/templates/asideActoresActricesDirectores.php'; ?><!-- .nk-aside -->
                            <!-- .nk-aside -->
                             <div class="nk-content-body">
                                 <div class="nk-content-wrap">

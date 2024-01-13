@@ -53,7 +53,9 @@
         case 'factura':
             include "app/views/facturaEntrada.php";
             break;
-        
+        case 'biblioteca':
+            include "app/views/bibliotecaPelicula.php";
+            break;
         case 'register':
             break;
         case 'inicio_2':

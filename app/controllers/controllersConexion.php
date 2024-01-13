@@ -1,4 +1,4 @@
-<!-- un controllers para el login, registrar usuario , editar Peliculas, listarPeliculas , listarUsuarios-->
+<!-- un controllers para el login, registrar usuario , admin => editar Peliculas, listarPeliculas , listarUsuarios-->
 <?php
     include "../controllers/controllersUsuario.php";
     $accion=$_REQUEST['ctl'] ?? 'login';
@@ -21,7 +21,15 @@
         case 'editar':
             (new controllersUsuario())->editarPelicula();
             break;
-        case 'borrarUsuario':
+        case 'editarActores':
+            (new controllersUsuario())->editarActorAztrizDirector();
+            break;
+        case 'borrarActores':
+            (new controllersUsuario())->eliminarActorActrizDirector();
+            break;
+        case 'añadirActores':
+            (new controllersUsuario())->crearActorAztrizDirector();
+            break;
             (new controllersUsuario())->eliminarUsuario();
             break;
         case 'recuperarPassword':
