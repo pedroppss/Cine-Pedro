@@ -25,6 +25,9 @@ module.exports = {
         royal_blue:'rgba(26, 44, 80, 1)',
         button_2:'rgba(255, 255, 255, 0.30)',
         button_3:'rgba(255, 255, 255, 0.10)',
+        button_4:'rgba(246, 246, 246, 0.40)',
+        menu_button:'#1D1731',
+        gray:'rgba(235, 235, 235, 0.30)',
       },
       colors:{
         color_button:'#EEEEEE',
@@ -34,6 +37,7 @@ module.exports = {
         color_white:'#F0F0F0',
         color_white_2:'rgba(255, 255, 255, 0.9)',
         color_white_3:'rgba(255, 255, 255, 1)',
+        color_white_4:'#F2F2F2',
         color_shade_900:'rgba(51, 51, 51, 1)',
         color_shade_700:'rgba(65, 74, 99, 1)',
         color_sky_blue:'rgba(17, 142, 234, 1)',
@@ -80,6 +84,7 @@ module.exports = {
       borderColor:{
         gray:'rgba(143, 143, 143, 0.40)', 
         gray_factura:'#C4C4C4',
+        gray_2:'rgba(220, 220, 220, 0.30)',
       }
     },
   },

@@ -61,23 +61,24 @@ class Usuario extends conexion{
         }
    }
    //Añadir una pelicula
-   public function añadir($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id)
+   public function añadir($nombrePelicula,$argumento,$clasificacion,$ano,$duracion,$edad,$genero_id,$imagen)
    {
         try
         {
             $instancia=new Usuario();
             $conexion=$instancia->conexion;
-            $consultasql="insert into peliculasc (nombre,clasificacion,año,duracion,argumento,clasificacion_edad,genero_id) values (:nombre,:clasif,:ano,:duracion,:argumento,:edad,:genero)";
+            $consultasql="insert into peliculasc (nombre,clasificacion,año,duracion,argumento,cartel,clasificacion_edad,genero_id) values (:nombre,:clasif,:ano,:duracion,:argumento,:cartel,:edad,:genero)";
             $enlaceDatos=$conexion->prepare($consultasql);
             $enlaceDatos->bindParam(":nombre",$nombrePelicula,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":clasif",$clasificacion,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":ano",$ano,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":duracion",$duracion,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":argumento",$argumento,PDO::PARAM_STR);
+            $enlaceDatos->bindParam(":cartel",$imagen,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":edad",$edad,PDO::PARAM_STR);
             $enlaceDatos->bindParam(":genero",$genero_id,PDO::PARAM_STR);
             $enlaceDatos->execute();
-            $enlaceDatos->fetch(PDO::PARAM_STR);
+            //$enlaceDatos->fetch(PDO::PARAM_STR);
         }catch(PDOException $e)
         {
             exit("Error:" .$e->getMessage());
@@ -86,12 +87,6 @@ class Usuario extends conexion{
    //Añadir un actor, un actriz o un Director
    public function anadiractoractrizdirector($nombre,$tipo,$imagen)
    {
-    /*
-    select personalc.nombre as nombre, 
-            personalc.imagen as imagen , personalc.tipo as tipo, peliculasc.nombre as titulo from peliculasc 
-            INNER JOIN peliculas_personalc on peliculasc.id=peliculas_personalc.pelicula_id 
-                INNER JOIN personalc on personalc.id=peliculas_personalc.personal_id where personalc.tipo='actor'";
-                */
     try
     {
         $instancia=new Usuario();
@@ -102,8 +97,7 @@ class Usuario extends conexion{
         $enlaceDatos->bindParam(":tipoA",$tipo,PDO::PARAM_STR);
         $enlaceDatos->bindParam(":imagenA",$imagen,PDO::PARAM_STR);
         $enlaceDatos->execute();
-        //s$enlaceDatos->fetch(PDO::PARAM_STR);
-        echo "se ha creado correctamente";
+        //$enlaceDatos->fetch(PDO::PARAM_STR);
 
     }catch(PDOException $e)
     {

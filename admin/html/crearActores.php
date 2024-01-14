@@ -51,7 +51,7 @@ session_start();
                                                     <h4 class="nk-block-title">Creación de Actores, Actrices o Directores</h4>
                                                 </div>
                                             </div>
-                                            <form action="app/views/login_register.php?ctl=añadirActores" method="POST">
+                                            <form action="app/views/login_register.php?ctl=añadirActores" method="POST" enctype="multipart/form-data">
                                             <div class="form-group">
                                                     <label class="form-label" for="default-01">Nombre del Actor, Actriz o Director para editar</label>
                                                     <div class="form-control-wrap">
@@ -66,8 +66,7 @@ session_start();
                                                     </select>
                                                     <br>
                                                     <label class="form-label" for="default-04">Seleccionar una imagen para subir</label>
-                                                    <input type="file" class="upload-btn" name="imagen" id="imagen">
-                                                    <div class="selected-file"></div>
+                                                    <input type="file" class="upload-btn" name="imagen" id="imagen" accept="image/*" required>
                                                     <br>
                                                     <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Editar</button>
                                             </div>

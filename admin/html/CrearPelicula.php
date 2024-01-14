@@ -51,7 +51,7 @@ session_start();
                                                     <h4 class="nk-block-title">Creación de Peliculas</h4>
                                                 </div>
                                             </div>
-                                            <form action="app/views/login_register.php?ctl=añadir" method="POST">
+                                            <form action="app/views/login_register.php?ctl=añadir" method="POST" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                     <label class="form-label" for="default-01">Nombre de la Pelicula</label>
                                                     <div class="form-control-wrap">        
@@ -94,6 +94,9 @@ session_start();
                                                             <option value="7">7-Terror</option>
                                                             <option value="8">8-Dibujos Aminados</option>
                                                         </select>    
+                                                    <br>
+                                                    <label class="form-label" for="default-08">Seleccionar una imagen para subir</label>
+                                                    <input type="file" class="upload-btn" name="imagen" id="imagen" accept="image/*" required>
                                                     <br>
                                                     <button class="w-300 h-12 mt-7 ml-[299px] bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" name="añadir" value="añadir">Añadir</button>
                                                 </div>

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +22,5 @@
                         <a class="w-300 h-12 mt-[50px] ml-2 bg-rose-600 text-2xl font-normal text-white font-poppins" type="submit" href="../../index.php"><p class="text-center mt-2">Ir al inicio</p></a> 
                 </div>
     </main>
-   <body>
 </body>
 </html>

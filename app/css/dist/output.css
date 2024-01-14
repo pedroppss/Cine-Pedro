@@ -627,6 +627,10 @@ video {
   margin-bottom: 5rem;
 }
 
+.mb-\[47px\]{
+  margin-bottom: 47px;
+}
+
 .ml-16{
   margin-left: 4rem;
 }
@@ -759,6 +763,10 @@ video {
   margin-top: 103px;
 }
 
+.mt-\[125px\]{
+  margin-top: 125px;
+}
+
 .mt-\[16px\]{
   margin-top: 16px;
 }
@@ -779,6 +787,10 @@ video {
   margin-top: 32px;
 }
 
+.mt-\[42\.08px\]{
+  margin-top: 42.08px;
+}
+
 .mt-\[50px\]{
   margin-top: 50px;
 }
@@ -789,6 +801,14 @@ video {
 
 .mt-\[6px\]{
   margin-top: 6px;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.ml-14{
+  margin-left: 3.5rem;
 }
 
 .flex{
@@ -891,8 +911,16 @@ video {
   height: 25px;
 }
 
+.h-\[296px\]{
+  height: 296px;
+}
+
 .h-\[46px\]{
   height: 46px;
+}
+
+.h-\[48px\]{
+  height: 48px;
 }
 
 .h-\[655px\]{
@@ -991,8 +1019,20 @@ video {
   width: 134px;
 }
 
+.w-\[200px\]{
+  width: 200px;
+}
+
 .w-\[26px\]{
   width: 26px;
+}
+
+.w-\[28px\]{
+  width: 28px;
+}
+
+.w-\[37px\]{
+  width: 37px;
 }
 
 .w-\[419px\]{
@@ -1087,6 +1127,10 @@ video {
   gap: 12px;
 }
 
+.gap-\[14px\]{
+  gap: 14px;
+}
+
 .gap-\[15px\]{
   gap: 15px;
 }
@@ -1107,8 +1151,16 @@ video {
   border-radius: 13px;
 }
 
+.rounded-\[3px\]{
+  border-radius: 3px;
+}
+
 .rounded-\[57px\]{
   border-radius: 57px;
+}
+
+.rounded-\[5px\]{
+  border-radius: 5px;
 }
 
 .rounded-\[6\.26px\]{
@@ -1127,12 +1179,20 @@ video {
   border-radius: 0.375rem;
 }
 
+.border-\[1\.108px\]{
+  border-width: 1.108px;
+}
+
 .border-\[1px\]{
   border-width: 1px;
 }
 
 .border-gray{
   border-color: rgba(143, 143, 143, 0.40);
+}
+
+.border-gray_2{
+  border-color: rgba(220, 220, 220, 0.30);
 }
 
 .border-gray_factura{
@@ -1146,6 +1206,14 @@ video {
 
 .bg-button_2{
   background-color: rgba(255, 255, 255, 0.30);
+}
+
+.bg-button_3{
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.bg-button_4{
+  background-color: rgba(246, 246, 246, 0.40);
 }
 
 .bg-button_gray{
@@ -1190,6 +1258,10 @@ video {
   background-color: #FFFFFF33;
 }
 
+.bg-gray{
+  background-color: rgba(235, 235, 235, 0.30);
+}
+
 .bg-p_rose{
   --tw-bg-opacity: 1;
   background-color: rgb(255 44 120 / var(--tw-bg-opacity));
@@ -1210,10 +1282,6 @@ video {
 
 .bg-shade_300{
   background-color: rgba(189, 197, 212, 1);
-}
-
-.bg-button_3{
-  background-color: rgba(255, 255, 255, 0.10);
 }
 
 .bg-personalized{
@@ -1405,4 +1473,9 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-color_white_4{
+  --tw-text-opacity: 1;
+  color: rgb(242 242 242 / var(--tw-text-opacity));
 }

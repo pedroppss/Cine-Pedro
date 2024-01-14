@@ -63,21 +63,27 @@ class controllersUsuario{
     public function recuperarPassword(){
         include "../views/recuperarPassword.php";
     }
-    public function añadirPelicula(){
+    public function añadirPelicula()
+    {
             include "../../admin/html/CrearPelicula.php";
             $usuario=new Usuario();
             if(!empty($_REQUEST['nombrePelicula']) && !empty($_REQUEST['argumento']) && !empty($_REQUEST['clasificacion']) && !empty($_REQUEST['ano']) && !empty($_REQUEST['duracion']) && !empty($_REQUEST['edad'])
-            && !empty($_REQUEST['genero_id']) )
+            && !empty($_REQUEST['genero_id']) && !empty($_FILES['imagen']) )
             {
+                $imagenP=$_FILES['imagen']['name'];
 
-                $_SESSION['usuarios']=$usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
-                $_REQUEST['genero_id']);
-                /*
-                $direccionImagen="../images/carteles/";
-                $file=$direccionImagen. basename($_FILES["imagen"]["name"]);
-                move_uploaded_file($_FILES["imagen"]["tmp_name"],$file);
-                echo "la pelicula se ha añadido correctamente";
-                */
+                if(in_array($_FILES['imagen']['type'],['image/jpeg','image/png','image/jpg']))
+                {
+                    $rutaDestinoPelicula = "../../app/images/carteles/$imagenP";
+                    move_uploaded_file($_FILES['imagen']['tmp_name'],$rutaDestinoPelicula);
+                    $usuario->añadir($_REQUEST['nombrePelicula'],$_REQUEST['argumento'],$_REQUEST['clasificacion'],$_REQUEST['ano'],$_REQUEST['duracion'],$_REQUEST['edad'],
+                    $_REQUEST['genero_id'],$imagenP);
+                    echo "Se ha creado correctamente";
+                }else
+                {
+                    echo "Formato de imagen no valido";
+                }
+               
             }else{
                 echo "debes introducir todos los campos que son obligatorios";
             }
@@ -159,11 +165,28 @@ class controllersUsuario{
         {
             $nombreAD=$_REQUEST['nombreActorActrizDirector'];
             $tipoAD=$_REQUEST['tipo'];
-            $imagenAD=$_FILES['imagen'];
-            if(in_array($imagenAD['type'],['image/jpeg','image/png','image/jpg']))
+            $imagenAD=$_FILES['imagen']['name'];
+            //verificamos si el tipo de archivo  es una imagen permitida
+            if(in_array($_FILES['imagen']['type'],['image/jpeg','image/png','image/jpg']))
             {
-                $usuario->anadiractoractrizdirector($nombreAD,$tipoAD,$imagenAD);
-            }else{
+                if($_REQUEST['tipo']=='Director')
+                {
+                    //la imagen va a la carpeta de imagenes "directores si el tipo es director.
+                    $rutaDestino="../../app/images/directores/$imagenAD";
+                    move_uploaded_file($_FILES['imagen']["tmp_name"],$rutaDestino);
+                    $usuario->anadiractoractrizdirector($nombreAD,$tipoAD,$imagenAD); 
+                }else
+                {  
+                    //la imagen va a la carpeta de imagenes "actores" si el tipo es actor o actriz.
+                    $rutaDestino="../../app/images/actores/$imagenAD";
+                    move_uploaded_file($_FILES['imagen']["tmp_name"],$rutaDestino);
+                    $usuario->anadiractoractrizdirector($nombreAD,$tipoAD,$imagenAD);
+                }
+                
+                echo "Se ha creado correctamente";
+
+            }else
+            {
                 echo "Formato de imagen no valido";
             }
         }else{
